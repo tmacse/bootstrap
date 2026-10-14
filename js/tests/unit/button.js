@@ -26,7 +26,7 @@ $(function () {
 
   QUnit.test('should return jquery collection containing the element', function (assert) {
     assert.expect(2)
-    var $el = $('<div/>')
+    var $el = $('<div></div>')
     var $button = $el.bootstrapButton()
     assert.ok($button instanceof $, 'returns jquery collection')
     assert.strictEqual($button[0], $el[0], 'collection contains element')

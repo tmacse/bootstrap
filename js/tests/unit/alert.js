@@ -26,7 +26,7 @@ $(function () {
 
   QUnit.test('should return jquery collection containing the element', function (assert) {
     assert.expect(2)
-    var $el = $('<div/>')
+    var $el = $('<div></div>')
     var $alert = $el.bootstrapAlert()
     assert.ok($alert instanceof $, 'returns jquery collection')
     assert.strictEqual($alert[0], $el[0], 'collection contains element')
@@ -69,7 +69,7 @@ $(function () {
   QUnit.test('should not fire closed when close is prevented', function (assert) {
     assert.expect(1)
     var done = assert.async()
-    $('<div class="alert"/>')
+    $('<div class="alert"></div>')
       .on('close.bs.alert', function (e) {
         e.preventDefault()
         assert.ok(true, 'close event fired')

@@ -1,8 +1,8 @@
 'use strict'
 
 const path    = require('path')
-const babel   = require('rollup-plugin-babel')
-const resolve = require('rollup-plugin-node-resolve')
+const babel   = require('@rollup/plugin-babel').babel
+const resolve = require('@rollup/plugin-node-resolve').nodeResolve
 
 const pkg     = require(path.resolve(__dirname, '../package.json'))
 const BUNDLE  = process.env.BUNDLE === 'true'
@@ -13,13 +13,7 @@ const external = ['jquery', 'popper.js']
 const plugins = [
   babel({
     exclude: 'node_modules/**', // Only transpile our source code
-    externalHelpersWhitelist: [ // Include only required helpers
-      'defineProperties',
-      'createClass',
-      'inheritsLoose',
-      'defineProperty',
-      'objectSpread'
-    ]
+    babelHelpers: 'bundled'
   })
 ]
 const globals = {

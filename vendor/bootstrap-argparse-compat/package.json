@@ -1,0 +1,10 @@
+{
+  "name": "@tmacse/bootstrap-argparse-compat",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Argparse 2 with the legacy constructor version property preserved",
+  "main": "index.js",
+  "license": "MIT",
+  "engines": { "node": ">=12" },
+  "dependencies": { "argparse-engine": "npm:argparse@2.0.1" }
+}

@@ -26,7 +26,7 @@ $(function () {
 
   QUnit.test('should throw explicit error on undefined method', function (assert) {
     assert.expect(1)
-    var $el = $('<div/>')
+    var $el = $('<div></div>')
     $el.bootstrapCarousel()
     try {
       $el.bootstrapCarousel('noMethod')
@@ -37,7 +37,7 @@ $(function () {
 
   QUnit.test('should return jquery collection containing the element', function (assert) {
     assert.expect(2)
-    var $el = $('<div/>')
+    var $el = $('<div></div>')
     var $carousel = $el.bootstrapCarousel()
     assert.ok($carousel instanceof $, 'returns jquery collection')
     assert.strictEqual($carousel[0], $el[0], 'collection contains element')
@@ -53,7 +53,7 @@ $(function () {
     }
 
     try {
-      $('<div/>').bootstrapCarousel(config)
+      $('<div></div>').bootstrapCarousel(config)
     } catch (err) {
       message = err.message
     }
@@ -66,7 +66,7 @@ $(function () {
     expectedMessage = 'CAROUSEL: Option "keyboard" provided type "element" but expected type "boolean".'
 
     try {
-      $('<div/>').bootstrapCarousel(config)
+      $('<div></div>').bootstrapCarousel(config)
     } catch (err) {
       message = err.message
     }
@@ -77,7 +77,7 @@ $(function () {
   QUnit.test('should not fire slid when slide is prevented', function (assert) {
     assert.expect(1)
     var done = assert.async()
-    $('<div class="carousel"/>')
+    $('<div class="carousel"></div>')
       .on('slide.bs.carousel', function (e) {
         e.preventDefault()
         assert.ok(true, 'slide event fired')
@@ -93,23 +93,23 @@ $(function () {
     assert.expect(6)
     var carouselHTML = '<div id="carousel-example-generic" class="carousel slide">' +
         '<ol class="carousel-indicators">' +
-        '<li data-target="#carousel-example-generic" data-slide-to="0" class="active"/>' +
-        '<li data-target="#carousel-example-generic" data-slide-to="1"/>' +
-        '<li data-target="#carousel-example-generic" data-slide-to="2"/>' +
+        '<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>' +
+        '<li data-target="#carousel-example-generic" data-slide-to="1"></li>' +
+        '<li data-target="#carousel-example-generic" data-slide-to="2"></li>' +
         '</ol>' +
         '<div class="carousel-inner">' +
         '<div class="carousel-item active">' +
-        '<div class="carousel-caption"/>' +
+        '<div class="carousel-caption"></div>' +
         '</div>' +
         '<div class="carousel-item">' +
-        '<div class="carousel-caption"/>' +
+        '<div class="carousel-caption"></div>' +
         '</div>' +
         '<div class="carousel-item">' +
-        '<div class="carousel-caption"/>' +
+        '<div class="carousel-caption"></div>' +
         '</div>' +
         '</div>' +
-        '<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev"/>' +
-        '<a class="right carousel-control" href="#carousel-example-generic" data-slide="next"/>' +
+        '<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev"></a>' +
+        '<a class="right carousel-control" href="#carousel-example-generic" data-slide="next"></a>' +
         '</div>'
     var $carousel = $(carouselHTML)
 
@@ -451,7 +451,7 @@ $(function () {
         '<div class="carousel-item active">' +
         '<img alt="">' +
         '</div>' +
-        '<script type="text/x-metamorph" id="thingy"/>' +
+        '<script type="text/x-metamorph" id="thingy"></script>' +
         '<div class="carousel-item">' +
         '<img alt="">' +
         '</div>' +
@@ -477,7 +477,7 @@ $(function () {
         '<div class="carousel-item active">' +
         '<img alt="">' +
         '</div>' +
-        '<script type="text/x-metamorph" id="thingy"/>' +
+        '<script type="text/x-metamorph" id="thingy"></script>' +
         '<div class="carousel-item">' +
         '<img alt="">' +
         '</div>' +
@@ -674,23 +674,23 @@ $(function () {
     assert.expect(3)
     var carouselHTML = '<div id="carousel-example-generic" class="carousel slide" data-wrap="true">' +
         '<ol class="carousel-indicators">' +
-        '<li data-target="#carousel-example-generic" data-slide-to="0" class="active"/>' +
-        '<li data-target="#carousel-example-generic" data-slide-to="1"/>' +
-        '<li data-target="#carousel-example-generic" data-slide-to="2"/>' +
+        '<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>' +
+        '<li data-target="#carousel-example-generic" data-slide-to="1"></li>' +
+        '<li data-target="#carousel-example-generic" data-slide-to="2"></li>' +
         '</ol>' +
         '<div class="carousel-inner">' +
         '<div class="carousel-item active" id="one">' +
-        '<div class="carousel-caption"/>' +
+        '<div class="carousel-caption"></div>' +
         '</div>' +
         '<div class="carousel-item" id="two">' +
-        '<div class="carousel-caption"/>' +
+        '<div class="carousel-caption"></div>' +
         '</div>' +
         '<div class="carousel-item" id="three">' +
-        '<div class="carousel-caption"/>' +
+        '<div class="carousel-caption"></div>' +
         '</div>' +
         '</div>' +
-        '<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev"/>' +
-        '<a class="right carousel-control" href="#carousel-example-generic" data-slide="next"/>' +
+        '<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev"></a>' +
+        '<a class="right carousel-control" href="#carousel-example-generic" data-slide="next"></a>' +
         '</div>'
     var $carousel = $(carouselHTML)
     var getActiveId = function () {
@@ -721,23 +721,23 @@ $(function () {
     assert.expect(1)
     var carouselHTML = '<div id="carousel-example-generic" class="carousel slide" data-wrap="true">' +
         '<ol class="carousel-indicators">' +
-        '<li data-target="#carousel-example-generic" data-slide-to="0" class="active"/>' +
-        '<li data-target="#carousel-example-generic" data-slide-to="1"/>' +
-        '<li data-target="#carousel-example-generic" data-slide-to="2"/>' +
+        '<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>' +
+        '<li data-target="#carousel-example-generic" data-slide-to="1"></li>' +
+        '<li data-target="#carousel-example-generic" data-slide-to="2"></li>' +
         '</ol>' +
         '<div class="carousel-inner">' +
         '<div class="carousel-item active" id="one">' +
-        '<div class="carousel-caption"/>' +
+        '<div class="carousel-caption"></div>' +
         '</div>' +
         '<div class="carousel-item" id="two">' +
-        '<div class="carousel-caption"/>' +
+        '<div class="carousel-caption"></div>' +
         '</div>' +
         '<div class="carousel-item" id="three">' +
-        '<div class="carousel-caption"/>' +
+        '<div class="carousel-caption"></div>' +
         '</div>' +
         '</div>' +
-        '<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev"/>' +
-        '<a class="right carousel-control" href="#carousel-example-generic" data-slide="next"/>' +
+        '<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev"></a>' +
+        '<a class="right carousel-control" href="#carousel-example-generic" data-slide="next"></a>' +
         '</div>'
     var $carousel = $(carouselHTML)
 
@@ -755,23 +755,23 @@ $(function () {
     assert.expect(3)
     var carouselHTML = '<div id="carousel-example-generic" class="carousel slide" data-wrap="false">' +
         '<ol class="carousel-indicators">' +
-        '<li data-target="#carousel-example-generic" data-slide-to="0" class="active"/>' +
-        '<li data-target="#carousel-example-generic" data-slide-to="1"/>' +
-        '<li data-target="#carousel-example-generic" data-slide-to="2"/>' +
+        '<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>' +
+        '<li data-target="#carousel-example-generic" data-slide-to="1"></li>' +
+        '<li data-target="#carousel-example-generic" data-slide-to="2"></li>' +
         '</ol>' +
         '<div class="carousel-inner">' +
         '<div class="carousel-item active" id="one">' +
-        '<div class="carousel-caption"/>' +
+        '<div class="carousel-caption"></div>' +
         '</div>' +
         '<div class="carousel-item" id="two">' +
-        '<div class="carousel-caption"/>' +
+        '<div class="carousel-caption"></div>' +
         '</div>' +
         '<div class="carousel-item" id="three">' +
-        '<div class="carousel-caption"/>' +
+        '<div class="carousel-caption"></div>' +
         '</div>' +
         '</div>' +
-        '<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev"/>' +
-        '<a class="right carousel-control" href="#carousel-example-generic" data-slide="next"/>' +
+        '<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev"></a>' +
+        '<a class="right carousel-control" href="#carousel-example-generic" data-slide="next"></a>' +
         '</div>'
     var $carousel = $(carouselHTML)
     var getActiveId = function () {
@@ -803,23 +803,23 @@ $(function () {
     assert.expect(1)
     var carouselHTML = '<div id="carousel-example-generic" class="carousel slide" data-wrap="false">' +
         '<ol class="carousel-indicators">' +
-        '<li data-target="#carousel-example-generic" data-slide-to="0" class="active"/>' +
-        '<li data-target="#carousel-example-generic" data-slide-to="1"/>' +
-        '<li data-target="#carousel-example-generic" data-slide-to="2"/>' +
+        '<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>' +
+        '<li data-target="#carousel-example-generic" data-slide-to="1"></li>' +
+        '<li data-target="#carousel-example-generic" data-slide-to="2"></li>' +
         '</ol>' +
         '<div class="carousel-inner">' +
         '<div class="carousel-item active" id="one">' +
-        '<div class="carousel-caption"/>' +
+        '<div class="carousel-caption"></div>' +
         '</div>' +
         '<div class="carousel-item" id="two">' +
-        '<div class="carousel-caption"/>' +
+        '<div class="carousel-caption"></div>' +
         '</div>' +
         '<div class="carousel-item" id="three">' +
-        '<div class="carousel-caption"/>' +
+        '<div class="carousel-caption"></div>' +
         '</div>' +
         '</div>' +
-        '<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev"/>' +
-        '<a class="right carousel-control" href="#carousel-example-generic" data-slide="next"/>' +
+        '<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev"></a>' +
+        '<a class="right carousel-control" href="#carousel-example-generic" data-slide="next"></a>' +
         '</div>'
     var $carousel = $(carouselHTML)
 

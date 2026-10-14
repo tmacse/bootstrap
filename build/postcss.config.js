@@ -9,6 +9,7 @@ module.exports = (ctx) => ({
   plugins: {
     autoprefixer: {
       cascade: false
-    }
+    },
+    'postcss-colormin': ctx.file.dirname.includes('examples') ? false : {}
   }
 })

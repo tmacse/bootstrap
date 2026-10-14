@@ -1,5 +1,5 @@
 {
-  "extends": ["stylelint-config-standard", "stylelint-config-recommended-scss"],
+  "extends": ["./build/stylelint-legacy.config.json"],
   "plugins": [
     "stylelint-order"
   ],
