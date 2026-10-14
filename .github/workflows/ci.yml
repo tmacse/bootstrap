@@ -1,0 +1,50 @@
+name: CI
+on:
+  push:
+    branches: [v4-dev]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  build-test:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        node: [22, 24]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7
+        with:
+          node-version: ${{ matrix.node }}
+      - uses: ruby/setup-ruby@651ff0d62c5c79bed6d53ec518387aae20e72c1a
+        with:
+          ruby-version: '3.4.11'
+          bundler: '2.6.9'
+          bundler-cache: true
+          cache-version: 1
+      - name: Install Java 17
+        run: |
+          sudo apt-get update
+          sudo apt-get install --no-install-recommends -y openjdk-17-jre-headless
+          echo "JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64" >> "$GITHUB_ENV"
+          echo "/usr/lib/jvm/java-17-openjdk-amd64/bin" >> "$GITHUB_PATH"
+      - name: Verify browser
+        run: |
+          command -v google-chrome
+          google-chrome --version
+          echo "CHROME_BIN=$(command -v google-chrome)" >> "$GITHUB_ENV"
+      - run: npm ci
+      - run: npm audit --audit-level=low
+      - run: npm run test-build-compat
+      - run: npm test
+      - run: bundle exec ruby build/test-ruby-docs.rb --site _gh_pages
+      - name: Audit Ruby dependencies
+        run: bundle exec bundler-audit check --update

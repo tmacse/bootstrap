@@ -55,13 +55,13 @@ Change the border color using utilities built on our theme colors.
 Add classes to an element to easily round its corners.
 
 <div class="bd-example bd-example-images">
-  <img data-src="holder.js/75x75" class="rounded" alt="Example rounded image">
-  <img data-src="holder.js/75x75" class="rounded-top" alt="Example top rounded image">
-  <img data-src="holder.js/75x75" class="rounded-right" alt="Example right rounded image">
-  <img data-src="holder.js/75x75" class="rounded-bottom" alt="Example bottom rounded image">
-  <img data-src="holder.js/75x75" class="rounded-left" alt="Example left rounded image">
-  <img data-src="holder.js/75x75" class="rounded-circle" alt="Completely round image">
-  <img data-src="holder.js/75x75" class="rounded-0" alt="Example non-rounded image (overrides rounding applied elsewhere)">
+  <img data-src="holder.js/75x75" class="rounded" alt="Example rounded image" src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22/%3E">
+  <img data-src="holder.js/75x75" class="rounded-top" alt="Example top rounded image" src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22/%3E">
+  <img data-src="holder.js/75x75" class="rounded-right" alt="Example right rounded image" src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22/%3E">
+  <img data-src="holder.js/75x75" class="rounded-bottom" alt="Example bottom rounded image" src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22/%3E">
+  <img data-src="holder.js/75x75" class="rounded-left" alt="Example left rounded image" src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22/%3E">
+  <img data-src="holder.js/75x75" class="rounded-circle" alt="Completely round image" src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22/%3E">
+  <img data-src="holder.js/75x75" class="rounded-0" alt="Example non-rounded image (overrides rounding applied elsewhere)" src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22/%3E">
 </div>
 
 {% highlight html %}

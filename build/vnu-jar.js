@@ -12,18 +12,11 @@
 const childProcess = require('child_process')
 const path = require('path')
 const vnu = require('vnu-jar')
-const vnuVersion = require('vnu-jar/package.json').version
-const baseline = require('./vnu-legacy-baseline.json')
-const legacy = require('./vnu-legacy')
+const report = require('./vnu-report')
 
 childProcess.execFile('java', ['-version'], (error, stdout, stderr) => {
   if (error) {
     console.error('VNU check failed: Java is unavailable.')
-    process.exitCode = 1
-    return
-  }
-  if (baseline.checkerVersion !== vnuVersion) {
-    console.error('VNU checker version differs from the reviewed legacy baseline.')
     process.exitCode = 1
     return
   }
@@ -57,7 +50,7 @@ childProcess.execFile('java', ['-version'], (error, stdout, stderr) => {
   const args = [
     '-jar',
     vnu,
-    // Keep the canonical JSON message text used by the reference signatures.
+    // Parse tool errors and diagnostics explicitly and fail closed.
     '--format',
     'json',
     '--stdout',
@@ -74,7 +67,7 @@ childProcess.execFile('java', ['-version'], (error, stdout, stderr) => {
     args.splice(0, 0, '-Xss512k')
   }
 
-  // Only fixed reference diagnostics are grandfathered; new warnings still fail --Werror.
+  // Every remaining error or warning blocks the build; there is no legacy baseline.
   const checker = childProcess.spawn('java', args)
   let output = ''
   let diagnostics = ''
@@ -90,7 +83,7 @@ childProcess.execFile('java', ['-version'], (error, stdout, stderr) => {
   })
   checker.on('close', (code) => {
     try {
-      const result = legacy.evaluate(output, code, baseline, [
+      const result = report.evaluate(output, code, [
         {
           directory: path.resolve('_gh_pages'),
           prefix: ''
@@ -100,7 +93,7 @@ childProcess.execFile('java', ['-version'], (error, stdout, stderr) => {
           prefix: 'js/tests/'
         }
       ])
-      console.log(`VNU: ${result.known} known legacy diagnostics; ${result.unexpected.length} new diagnostics.`)
+      console.log(`VNU: ${result.unexpected.length} blocking diagnostics.`)
       result.unexpected.forEach((message) => {
         console.error(`${message.path || message.url || '(validator)'}: ${message.message}`)
       })

@@ -5,7 +5,6 @@
 
 const assert = require('assert')
 const childProcess = require('child_process')
-const crypto = require('crypto')
 const fs = require('fs')
 const http = require('http')
 const os = require('os')
@@ -18,7 +17,7 @@ const braces = require('braces')
 const micromatch = require('micromatch')
 const SauceTunnel = require('sauce-tunnel')
 const vnu = require('vnu-jar')
-const vnuLegacy = require('./vnu-legacy')
+const vnuReport = require('./vnu-report')
 
 const yamlPath = path.dirname(require.resolve('js-yaml/package.json'))
 const yamlVersion = require(path.join(yamlPath, 'package.json')).version
@@ -200,46 +199,26 @@ function testHTMLGate() {
     directory,
     prefix: ''
   }]
-  const empty = {
-    schemaVersion: 1,
-    entries: []
-  }
   try {
     const valid = childProcess.spawnSync('java', args.concat(validPath), {
       encoding: 'utf8'
     })
     assert.ifError(valid.error)
-    assert(vnuLegacy.evaluate(valid.stdout, valid.status, empty, roots).passed)
+    assert(vnuReport.evaluate(valid.stdout, valid.status, roots).passed)
 
     const invalid = childProcess.spawnSync('java', args.concat(invalidPath), {
       encoding: 'utf8'
     })
     assert.ifError(invalid.error)
-    assert(!vnuLegacy.evaluate(invalid.stdout, invalid.status, empty, roots).passed)
-    const message = JSON.parse(invalid.stdout).messages.find((item) => item.type === 'error')
-    const highlightHTML = message.extract.slice(message.hiliteStart, message.hiliteStart + message.hiliteLength)
-    const limited = {
-      schemaVersion: 1,
-      entries: [{
-        path: 'invalid.html',
-        type: message.type,
-        subType: message.subType || null,
-        message: message.message,
-        highlightHTML,
-        extractHash: crypto.createHash('sha256').update(highlightHTML).digest('hex'),
-        count: 1
-      }]
-    }
-    assert(vnuLegacy.evaluate(invalid.stdout, invalid.status, limited, roots).passed)
+    assert(!vnuReport.evaluate(invalid.stdout, invalid.status, roots).passed)
     const repeated = childProcess.spawnSync('java', args.concat([invalidPath, invalidPath]), {
       encoding: 'utf8'
     })
-    const repeatedResult = vnuLegacy.evaluate(repeated.stdout, repeated.status, limited, roots)
-    assert.strictEqual(repeatedResult.known, 1)
-    assert.strictEqual(repeatedResult.unexpected.length, 1)
+    const repeatedResult = vnuReport.evaluate(repeated.stdout, repeated.status, roots)
+    assert.strictEqual(repeatedResult.unexpected.length, 2)
     assert(!repeatedResult.passed)
-    assert.throws(() => vnuLegacy.evaluate('{', 0, empty, roots), SyntaxError)
-    assert.throws(() => vnuLegacy.evaluate(valid.stdout, 2, empty, roots), /Unexpected VNU exit code/)
+    assert.throws(() => vnuReport.evaluate('{', 0, roots), SyntaxError)
+    assert.throws(() => vnuReport.evaluate(valid.stdout, 2, roots), /Unexpected VNU exit code/)
     const missingJava = childProcess.spawnSync(process.execPath, [path.join(__dirname, 'vnu-jar.js')], {
       encoding: 'utf8',
       env: Object.assign({}, process.env, {

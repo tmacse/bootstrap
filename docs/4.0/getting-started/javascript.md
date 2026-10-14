@@ -33,7 +33,8 @@ $(document).off('.alert.data-api')
 {% endhighlight %}
 
 {% capture callout %}
-##### Escaping selectors
+### Escaping selectors
+{: .h5}
 If you use special selectors, for example: `collapse:Example`, be sure to escape them, because they'll be passed through jQuery.
 {% endcapture %}
 {% include callout.html content=callout type="warning" %}
@@ -121,7 +122,8 @@ $.fn.tooltip.Constructor.VERSION // => "{{ site.current_version }}"
 Bootstrap's plugins don't fall back particularly gracefully when JavaScript is disabled. If you care about the user experience in this case, use [`<noscript>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript) to explain the situation (and how to re-enable JavaScript) to your users, and/or add your own custom fallbacks.
 
 {% capture callout %}
-##### Third-party libraries
+### Third-party libraries
+{: .h5}
 
 **Bootstrap does not officially support third-party JavaScript libraries** like Prototype or jQuery UI. Despite `.noConflict` and namespaced events, there may be compatibility problems that you need to fix on your own.
 {% endcapture %}

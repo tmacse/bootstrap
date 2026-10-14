@@ -8,9 +8,11 @@
   order: 1;
 
   // Hack the sticky header
-  > h2[id],
-  > h3[id],
-  > h4[id] {
+  > h2[id]:not(.h3):not(.h4):not(.h5),
+  > h3[id]:not(.h4):not(.h5),
+  > h4[id]:not(.h5),
+  > .h3[id],
+  > .h4[id] {
     pointer-events: none;
 
     > div,
@@ -72,11 +74,12 @@
 //
 
 .bd-content {
-  > h2:not(:first-child) {
+  > h2:not(:first-child):not(.h3):not(.h4):not(.h5) {
     margin-top: 3rem;
   }
 
-  > h3 {
+  > h3:not(.h4):not(.h5),
+  > .h3 {
     margin-top: 1.5rem;
   }
 

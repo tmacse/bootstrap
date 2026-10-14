@@ -31,7 +31,7 @@ Width and height utilities are generated from the `$sizes` Sass map in `_variabl
 You can also use `max-width: 100%;` and `max-height: 100%;` utilities as needed.
 
 {% capture example %}
-<img class="mw-100" data-src="holder.js/1000px100?text=Max-width%20%3D%20100%25" alt="Max-width 100%">
+<img class="mw-100" data-src="holder.js/1000px100?text=Max-width%20%3D%20100%25" alt="Max-width 100%" src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22/%3E">
 {% endcapture %}
 {% include example.html content=example %}
 
