@@ -27,7 +27,7 @@ $(function () {
 
   QUnit.test('should throw explicit error on undefined method', function (assert) {
     assert.expect(1)
-    var $el = $('<div/>')
+    var $el = $('<div></div>')
     $el.bootstrapPopover()
     try {
       $el.bootstrapPopover('noMethod')
@@ -38,7 +38,7 @@ $(function () {
 
   QUnit.test('should return jquery collection containing the element', function (assert) {
     assert.expect(2)
-    var $el = $('<div/>')
+    var $el = $('<div></div>')
     var $popover = $el.bootstrapPopover()
     assert.ok($popover instanceof $, 'returns jquery collection')
     assert.strictEqual($popover[0], $el[0], 'collection contains element')
@@ -110,7 +110,7 @@ $(function () {
     assert.expect(5)
     var title = document.createTextNode('@glebm <3 writing tests')
     var content = $('<i>¯\\_(ツ)_/¯</i>').get(0)
-    var $popover = $('<a href="#" rel="tooltip"/>')
+    var $popover = $('<a href="#" rel="tooltip"></a>')
       .appendTo('#qunit-fixture')
       .bootstrapPopover({
         html: true,
@@ -132,7 +132,7 @@ $(function () {
     assert.expect(5)
     var title = document.createTextNode('@glebm <3 writing tests')
     var content = $('<i>¯\\_(ツ)_/¯</i>').get(0)
-    var $popover = $('<a href="#" rel="tooltip"/>')
+    var $popover = $('<a href="#" rel="tooltip"></a>')
       .appendTo('#qunit-fixture')
       .bootstrapPopover({
         title: title,
@@ -151,7 +151,7 @@ $(function () {
   QUnit.test('should not duplicate HTML object', function (assert) {
     assert.expect(6)
     var done = assert.async()
-    var $div = $('<div/>').html('loves writing tests （╯°□°）╯︵ ┻━┻')
+    var $div = $('<div></div>').html('loves writing tests （╯°□°）╯︵ ┻━┻')
 
     var $popover = $('<a href="#">@fat</a>')
       .appendTo('#qunit-fixture')
@@ -252,7 +252,7 @@ $(function () {
 
   QUnit.test('should destroy popover', function (assert) {
     assert.expect(7)
-    var $popover = $('<div/>')
+    var $popover = $('<div></div>')
       .bootstrapPopover({
         trigger: 'hover'
       })
@@ -367,7 +367,7 @@ $(function () {
     var done = assert.async()
 
     try {
-      $('<div data-toggle="popover" data-title="some title" data-content="@Johann-S" style="display: none"/>').bootstrapPopover('show')
+      $('<div data-toggle="popover" data-title="some title" data-content="@Johann-S" style="display: none"></div>').bootstrapPopover('show')
     } catch (err) {
       assert.strictEqual(err.message, 'Please use show on visible elements')
       done()

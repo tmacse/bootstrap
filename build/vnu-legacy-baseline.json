@@ -1,0 +1,1858 @@
+{
+  "schemaVersion": 1,
+  "checkerVersion": "26.10.12",
+  "provenance": {
+    "gitBase": "10c64bdae867c0dcc808a68af12d551710baea8d",
+    "reference": "Original Jekyll 3.7.3/kramdown 1.16.2 templates and plugins on modern native/stdlib dependencies with a temporary File.read kwargs adapter; candidate CSS inputs. This is not an exact old Gemfile.lock installation.",
+    "inputs": "103 reference HTML pages and the same current 11 js/tests HTML pages; js/tests have no baseline diagnostics.",
+    "scope": "Immutable legacy diagnostics only, not globally ignored ARIA/heading categories. No automatic update path.",
+    "highlightDefinition": "Complete UTF-16 diagnostic extract slice using hiliteStart and hiliteLength; surrounding display margins are excluded.",
+    "legacyFilterSHA256": "cd20b8da2788b35488d0b5f0ac30464ff0b49b66da5eca5ef580d135542f969c",
+    "sourceHashes": {
+      "_config.yml": "3c3883e86197d2ed10a604711560fd91a167c74e23f9582cccdc85fa4bf6342f",
+      "_includes/ads.html": "feef9e0015ed056e2b84951727ab951bb483415fef9e506f9194abff70fe7afa",
+      "_includes/bugify.html": "ac3bebcdbf88af748904839070fadf297405d8e508738fa04bf55a77106f7395",
+      "_includes/callout-danger-async-methods.md": "04cdfe3026cd0d3c3c6dee0262c6e189256345d7065359efb3547a7cef23c5eb",
+      "_includes/callout-info-mediaqueries-breakpoints.md": "48026768eb3ce1c7cabfd23eb43992eae528214bdfb309cb994cccdc210b36b9",
+      "_includes/callout-warning-color-assistive-technologies.md": "8b6cca14a8434ce641ae2784ebf8e5a4222d80654eca122a58306ae7152c0f55",
+      "_includes/callout.html": "99bf224ebfe15b84ef57f9b8fcc462e88a1305509cf04e7fe0f4d9a4d440d262",
+      "_includes/docs-navbar.html": "3712fe77c15626f7e8be0dbee22990642d59c3c2e0e6da5eddf231ec5aee646e",
+      "_includes/docs-sidebar.html": "969ab9dcaf311f06bb70cbd8586f66709b447cd86e830590471c19bf85127a45",
+      "_includes/example.html": "4c87f97874722edf9a1c6a3ee2ef107b9e498a6200eee2e6328cba7801c62971",
+      "_includes/favicons.html": "20cead4899496fdea6e33a018745b15fdfd8970b9ca6b30405d3e922a31e1eb7",
+      "_includes/footer.html": "8cccf08cc8e270c7bdf31b2c4020e7a99e76e72b3656887c3c14f82edd7bf5ef",
+      "_includes/header.html": "289089aad7e7953468ce4d2913d45d81065c054d613fe8aa5833bdbb7e5f5b2f",
+      "_includes/scripts.html": "f51e631ede148c47ea2be461e383365637c3f210a9b0bcfe9ce2f18310274090",
+      "_includes/skippy.html": "e7bbd67f6d05b35b314b8e1b64bbd3dd4143444333a1173f29f8e635541c92bc",
+      "_includes/social.html": "08e2d8a56ee8d0aa070aa9b36f24c3a08e41565c3a32e4cb88a0734c09d1b327",
+      "_layouts/default.html": "4071928d8cd223ad5235f22ec001c8bfb025e22325c2114ccc555d434c4f1092",
+      "_layouts/docs.html": "9aab224d02d3ff4dfa1714ee91574f8889987e469f18d2db4d6505f8dc1356f3",
+      "_layouts/examples.html": "117b6f36c5f0b1165370fe6ecf60f01bc61e88a93343343836d9b553395f2259",
+      "_layouts/home.html": "ee4816d16ee8590ad9340bde35163b072637ef81b0d48e42582628d648cfeed0",
+      "_layouts/redirect.html": "1be38c1b9742f9d2ef16a9363daa0c9defafdaaac0f82afacfce26fd75ccba79",
+      "_layouts/simple.html": "5593db7dcb379696126c17303ee2adf9351b1d35990e89f0c8ca66005be927d0",
+      "docs/4.0/about/brand.md": "58d9a371c7e875d644a15d237a006c9274a9e8c318ad83aae9b94c5a48dc19e9",
+      "docs/4.0/about/license.md": "d3cd62cf34a5de3aab6e217fb7bd6ebf057969c940c28f02f09d91420d6e116b",
+      "docs/4.0/about/overview.md": "d4a1018fe973c75366d238ce8b2a4a1360533953d0812c1dd8a4b9c68b3d54f0",
+      "docs/4.0/about/translations.md": "79cfb450e4b167f28a5b65ee17112068e3b19d97c622868b0ec756290a239b3f",
+      "docs/4.0/browser-bugs.md": "e14c1eb70a24b11c09a258b46b6d382663536299291ce019c69f0b341e14536e",
+      "docs/4.0/components/alerts.md": "9de0900e801ca941e97257a11d1bc519a03eb800073f0604e571089f10283142",
+      "docs/4.0/components/badge.md": "cd41731c85a9041a4b4921bc115b9b03bcd09ee0e3ac8fee80ae171898261e13",
+      "docs/4.0/components/breadcrumb.md": "0e17ed0f6f60ff0ea99fe48e7b37025d7248307a271f82b3b25e8b3c25527511",
+      "docs/4.0/components/button-group.md": "71734ad3e6ef414498690f68bbfee7a1ad995ef37b29078058ce1ee7aa9ed24b",
+      "docs/4.0/components/buttons.md": "d4d7cea43f2bfeef8d69f36209d334eba42129cfc6837e0615cd73f1d4c6aab5",
+      "docs/4.0/components/card.md": "3ba8440963d03c92b635a86cfa498196b56c678d85785b0ec7029cffd76a51af",
+      "docs/4.0/components/carousel.md": "1c78777ec21432928cc80b73ad67c26a9ecaf072fdcc41f090dd45a7d234146f",
+      "docs/4.0/components/collapse.md": "dc7f61e2f621f53875260c8b7191892740836ba508e39a400a1c61a7ccdde439",
+      "docs/4.0/components/dropdowns.md": "0553757802d2b1092d5eeb9ac547de57c72b991dec3be345bccdddeefcd5c7bb",
+      "docs/4.0/components/forms.md": "12331ac217b0a4456f880313d4ca4f48f02abf8193bcc42be0f3305dd338bf06",
+      "docs/4.0/components/input-group.md": "206b498e9bc499433cec97a15c547343b8990ed6ba7eea802bd0ed536ee19d59",
+      "docs/4.0/components/jumbotron.md": "ac1b7b9c48c0a09f49caf72473f1d2405d6ee39c6e6cd66ceec00781d67b42dc",
+      "docs/4.0/components/list-group.md": "19d7d8d3ca68fad893e276dd3152607d0a1928b175745fcffd7c04f5432c95ab",
+      "docs/4.0/components/modal.md": "0a10ccabb3a8eeb6dcec85410ea82f86cc957ea556871ea3cad062ba91f8608a",
+      "docs/4.0/components/navbar.md": "3a517ac96558f39f3f924a92a2baefa7b2946c37611e7254be3d6666f8213c7c",
+      "docs/4.0/components/navs.md": "1bee391e30837d3fe562d5f2fc34f20186be89be1d4ae46863b1bc6266e46842",
+      "docs/4.0/components/pagination.md": "b826d3db27f09d1900d6f09de8e2849321c34c01cb86b5de69b35d22a94dac1d",
+      "docs/4.0/components/popovers.md": "0de00bb39c87c4918a603f07821a844bf446d9f6ecd1896a0e7542a7b9512b7f",
+      "docs/4.0/components/progress.md": "82bafb6b0bbf4ea53672436782406e368a376c721267c697e63b12a8d85b1c1f",
+      "docs/4.0/components/scrollspy.md": "37b7a92bc8c14e0e11dedc31096c483c2302a9ccc178e7e85bb789f0d26fbc7c",
+      "docs/4.0/components/tooltips.md": "e64d698feed49080d1e18c497a05e49c762f890935918dd0d2eb71a79698ee74",
+      "docs/4.0/content/code.md": "02cd42d82e0614c2575b66c3b3f5903bad9ddff67fc4682aa4c00b0d2fd99d53",
+      "docs/4.0/content/figures.md": "997d9e6e84cadd5e2f6f3ab9328de8db177c679ba5129bbdebfb57999cc1c694",
+      "docs/4.0/content/images.md": "0634b8b4645c507de88b4ab3cd4e676027314b52b779a1a637b153dfcd83ade0",
+      "docs/4.0/content/reboot.md": "7a249b9d4e3510203130d7aa91aa14fe8dbe541ba636b453aaefde1b4e4f60e7",
+      "docs/4.0/content/tables.md": "cb7e81dcda21c4686accc450fd2d68ac1df75f6f11110eca995ac216d7447746",
+      "docs/4.0/content/typography.md": "325dc5b864f8f73ee75b079282212878869406693ea9c78819d334dbb35d8010",
+      "docs/4.0/examples/album/index.html": "5081a37a948083d99f671f4a955e327d2eaa168ea712e6e4f9e9390e7e8d8379",
+      "docs/4.0/examples/blog/index.html": "8a8ce78220b917404da6079043d4c30c2678e755f58d8d86d898913c1cd22b6b",
+      "docs/4.0/examples/carousel/index.html": "d86c890039cd50a61082d65271afadc08a024d6613fb92355c0d8b3ec85dd13a",
+      "docs/4.0/examples/checkout/index.html": "1200195da64eff217bf67a6dc595a459034aff5d06e8f340d7c6cc90aa3118e9",
+      "docs/4.0/examples/cover/index.html": "a21e720c48b0af915ad6c9dbabb144f4e28ff62376690433877d4e9a2083c40e",
+      "docs/4.0/examples/dashboard/index.html": "f13c116d7049e2dfb65c6fcd9f7396808b3332a6861737771f584bc565fea483",
+      "docs/4.0/examples/floating-labels/index.html": "0d3791eb6f05e71555e041715e2dc7107c498366d573def955b9d163b7618334",
+      "docs/4.0/examples/grid/index.html": "bc6b36231090dbb0af05b77caf9acf659691d0f96d7b0b204f23e32f73c59e90",
+      "docs/4.0/examples/index.html": "540c267f794714074994c194e666ed16a347b18cd8dc75f4b821ae8e76766ce4",
+      "docs/4.0/examples/jumbotron/index.html": "deb2fbca6bd71f4c605f018ab796ca095e9b5f97416cebadda14e83123690d6c",
+      "docs/4.0/examples/navbar-bottom/index.html": "cbb95f24d6551ff3623f72cfa3865ec1aaa959175880313907c7af58dc93d152",
+      "docs/4.0/examples/navbar-fixed/index.html": "2d6849c1e2a2ea3298fbabf3bf629c9b9d573480207702d4ac0f4ba7b3b99146",
+      "docs/4.0/examples/navbar-static/index.html": "9c851208867d9560963a43b15e2b8e7a79ac07eaa3e960ab3cb9d3b33e869d29",
+      "docs/4.0/examples/navbars/index.html": "ae99a4e22f92bd4fdf42ca270cbbe3cbc0ff4c9ebd3e3de8f5eb5f0be86cb9bd",
+      "docs/4.0/examples/offcanvas/index.html": "3666bc94779ae7b4879b76535812217fff86a0a0656859e0784cc65e33506993",
+      "docs/4.0/examples/pricing/index.html": "c3a6aa8f231b0fb5465413ebb468a67928c38389abe25035519999c13f129c37",
+      "docs/4.0/examples/product/index.html": "df9557628c8a44d111d64d67f7d49bb78a11a99f43845d6143d61eac36bc160f",
+      "docs/4.0/examples/sign-in/index.html": "5b986e3c16413937be5bab5b506325896ffee79b882d6176a4491fa43d7345f4",
+      "docs/4.0/examples/starter-template/index.html": "96c150b6bf8649c215f9be720ad40be9882600f7d6491253c0cbd3c250066c0b",
+      "docs/4.0/examples/sticky-footer-navbar/index.html": "7784f1a441f10ba875b796fd8dc35025ec7de032b28a520a48fd1545551d09eb",
+      "docs/4.0/examples/sticky-footer/index.html": "f0ada8d3dc50a048d9fde33e42f24150670aa4fcb8405edf80ed814e49e65845",
+      "docs/4.0/examples/tooltip-viewport/index.html": "743bd81cc314459c2bbcf65fc0741198d4268664177eece8941dab1ebb7aaf67",
+      "docs/4.0/extend/approach.md": "59b049ee51c738f7ef09385672920dafa52ddd0cd12e051ce0def9f3bb99ef59",
+      "docs/4.0/extend/icons.md": "8b733187af566e5b1af686f2ff684d67e7d09cf910c7a85e2222445ab6eb902f",
+      "docs/4.0/extend/index.md": "e8804c2ae83a7da569c3ff829f6ff3ce4fa96a7ed6763c4f2aa8f79e15997c94",
+      "docs/4.0/getting-started/accessibility.md": "732b080120901ea35b5e6a5e3948cc2a16734dc03485212a2457da939d66a41d",
+      "docs/4.0/getting-started/best-practices.md": "7e919f6366b9b9f475bb3767d04d5951452ca8017ce4f84663618d442cde21ff",
+      "docs/4.0/getting-started/browsers-devices.md": "3c7363d905bbf6c21b82e8f4a17c49b9bfbb4475537c0f9c42b446103e780333",
+      "docs/4.0/getting-started/build-tools.md": "bc093ce81b52fcb4c7a0a28e27a226db5f2fb54f4e7bbf1866f9d62bbcb5e73b",
+      "docs/4.0/getting-started/contents.md": "d023dfd5e89a777850c57d046af87608dd3abf945061d1ddf61ddde44f0f94d9",
+      "docs/4.0/getting-started/download.md": "8abd43fd955943f4ecd0c0e100ddd487d88fe84e3438eb399c87ecf55189bbc3",
+      "docs/4.0/getting-started/introduction.md": "86f83f059a1fb31b0a336339d9f4eb1877d5373511e1fcbef6e67915ae74dbf2",
+      "docs/4.0/getting-started/javascript.md": "5660736af4eab7cd4a6f5f09f60704aef31237b337ca339b863fd71c0bb83ba1",
+      "docs/4.0/getting-started/theming.md": "f1151042560fdfcb8883a8e2ea06556b797e6947b442630be6d4ce04161f1e0a",
+      "docs/4.0/getting-started/webpack.md": "56f02b1c405ec5f5407f264d9f65556175ed00fe953e79870c6c64df3c72f33d",
+      "docs/4.0/layout/grid.md": "f12e5e8f39818781bed2197b867b2320a64b9d5df82eccb8f39b042aa95dc473",
+      "docs/4.0/layout/media-object.md": "12332c6f02520c4f06b4d1ee076ec22ea4e88014168ac191929b85b78bb22d1a",
+      "docs/4.0/layout/overview.md": "4bf85fc54125135cd67a499dbbe001a9834487d13a6a85088f460780b9ac4d7e",
+      "docs/4.0/layout/utilities-for-layout.md": "f435d84dd80ff1240891c0e97b49875321413e3011c971d7e802af24724ccbd8",
+      "docs/4.0/migration.md": "371a3ac2cd783f766a3e9fe3dbe63fc0e6e5138d5b50d7e00378b218ccf73cac",
+      "docs/4.0/utilities/borders.md": "2ec736ca13132a271be3fe2a33187de529060ab2f135f7a258036d8fef01387b",
+      "docs/4.0/utilities/clearfix.md": "e5ceb848872faf5240a8b57afb56df26d2f196d8951418bc7d2a8eaae74a4cf3",
+      "docs/4.0/utilities/close-icon.md": "0c03ac9a83abd3673610fd5c2fb080f4595ae24431ee128caf523f59a4bed0da",
+      "docs/4.0/utilities/colors.md": "6b37d741c00976a0c760048de6142a630556a69cde0783f82e9e13387449ea42",
+      "docs/4.0/utilities/display.md": "c29c78db51e8fd069c9cae50b3f2b69df5a644d38d6a94afb9ead5cc4605dd4b",
+      "docs/4.0/utilities/embed.md": "2a5b1a3df9c15944666e1d71e551bc714096207a36b8fefa0580133dcc1d26a1",
+      "docs/4.0/utilities/flex.md": "024c9dcca4feb44037b4b8df0caee59833f66d20af7563f5839ad29833b1d678",
+      "docs/4.0/utilities/float.md": "704c29797d61b08b5241d3864eac4c2f6eeae3ac1125e3f2dd106073a86dcd43",
+      "docs/4.0/utilities/image-replacement.md": "bd123b1701af36829e34e915698a1296e8c81fbdb4ba8dd696a47bab80ce9cdb",
+      "docs/4.0/utilities/position.md": "3847ce7e739724f92e780da584df00adb96f688aafc3623a06c1b36058ef1743",
+      "docs/4.0/utilities/screenreaders.md": "8b7e92725f35541283dd83849cd1d897608db5cd4be2b1284e26ceec1f494e32",
+      "docs/4.0/utilities/shadows.md": "43e6612a88177e9e320c970e1767d6cbf81c64eaed6f15f0b55b683665ef35e1",
+      "docs/4.0/utilities/sizing.md": "e4e692a87b68f0b29e04974804c60bf6f70c9adab190e8def34e14f9c3c484b6",
+      "docs/4.0/utilities/spacing.md": "ddc75a4bc4765b0952102670734b67ced73ea17587df5344924837be67d5bc20",
+      "docs/4.0/utilities/text.md": "8d486032d1f2b4147d27f37a925744a6dbd77b81f742f5060a3e0b65ba9da8fe",
+      "docs/4.0/utilities/vertical-align.md": "1fd5dcf1e43406392bb32866ff2fe734030263a6d6a53ba705ea991f471daa7e",
+      "docs/4.0/utilities/visibility.md": "d622204f49e620f2374301fec75545621b1bd517c2b2c05f3b628db5a57d0ad8",
+      "index.html": "4dddc69bd87bb6a490819a054a90edf7e95766303876631eeac84638c166a9a6"
+    },
+    "diagnosticSnapshotSHA256": "94787b6005f7f3769b6c29a6196596f4db08259dad010392eae9aa7b0ba95be3",
+    "diagnostics": "Verified reference+tests diagnostic snapshot: 255 errors and 5 warnings. The exact Scrollspy Lorem ipsum warning also reproduces on the reference file alone; its occurrence may vary with batch language detection."
+  },
+  "entries": [
+    {
+      "path": "docs/4.0/about/brand/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/about/license/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The heading “h4” (with computed level 4) follows the heading “h1” (with computed level 1), skipping 2 heading levels.",
+      "highlightHTML": "<h4 id=\"it-requires-you-to\">",
+      "extractHash": "6c0a3dd28581d4c99f022ebe0b149cc1d1375577e5a47290893a92cafbcfe6a6",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/about/license/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/about/overview/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/about/translations/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/browser-bugs/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/alerts/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The heading “h5” (with computed level 5) follows the heading “h2” (with computed level 2), skipping 2 heading levels.",
+      "highlightHTML": "<h5 id=\"conveying-meaning-to-assistive-technologies\">",
+      "extractHash": "26c12bf892eabbe81eaf0ac76ea1631f38a734ff7e573c0fbddb970dfc1782e2",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/alerts/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/badge/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The heading “h5” (with computed level 5) follows the heading “h2” (with computed level 2), skipping 2 heading levels.",
+      "highlightHTML": "<h5 id=\"conveying-meaning-to-assistive-technologies\">",
+      "extractHash": "26c12bf892eabbe81eaf0ac76ea1631f38a734ff7e573c0fbddb970dfc1782e2",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/badge/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/breadcrumb/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/button-group/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The heading “h5” (with computed level 5) follows the heading “h2” (with computed level 2), skipping 2 heading levels.",
+      "highlightHTML": "<h5 id=\"ensure-correct-role-and-provide-a-label\">",
+      "extractHash": "11bc67c56050c9da522f32ba6d76552fff0aa5908280d03d91171bb1ffb198a9",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/button-group/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/button-group/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu\" aria-labelledby=\"btnGroupDrop1\">",
+      "extractHash": "3a1b9868b68c5200c357eaf32e7dbe8bba92a27d123f309c69da28817bbf9d9b",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/button-group/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu\" aria-labelledby=\"btnGroupVerticalDrop1\">",
+      "extractHash": "164cdcb9b13d8d3b5734c10450dc46c3c92a6ba453553bf11eb7d80339f0c660",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/button-group/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu\" aria-labelledby=\"btnGroupVerticalDrop2\">",
+      "extractHash": "1b27a8f85dc1f23405c47582a9bcc2cca3c42b0913d13aa9ffb49150c75ee2dd",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/button-group/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu\" aria-labelledby=\"btnGroupVerticalDrop3\">",
+      "extractHash": "e4a9a28d610eeb133966dc984b2415f522913781ea21e58d76319a31a1633c1f",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/button-group/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu\" aria-labelledby=\"btnGroupVerticalDrop4\">",
+      "extractHash": "de032c62f4c8ba2ee47fabab25294322976322af02e0eb645c3f3e818fcff2d2",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/buttons/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The heading “h5” (with computed level 5) follows the heading “h2” (with computed level 2), skipping 2 heading levels.",
+      "highlightHTML": "<h5 id=\"conveying-meaning-to-assistive-technologies\">",
+      "extractHash": "26c12bf892eabbe81eaf0ac76ea1631f38a734ff7e573c0fbddb970dfc1782e2",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/buttons/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The heading “h5” (with computed level 5) follows the heading “h2” (with computed level 2), skipping 2 heading levels.",
+      "highlightHTML": "<h5 id=\"link-functionality-caveat\">",
+      "extractHash": "b59bd1b3a4ed3f5c4a8e29918c1b460cb027c5e310c31eb61a699d2c702d0393",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/buttons/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/buttons/index.html",
+      "type": "info",
+      "subType": "warning",
+      "message": "An “aria-disabled” attribute whose value is “true” should not be specified on an “a” element that has an “href” attribute.",
+      "highlightHTML": "<a href=\"#\" class=\"btn btn-primary btn-lg disabled\" tabindex=\"-1\" role=\"button\" aria-disabled=\"true\">",
+      "extractHash": "ba329785fe73c8dfe992f75d4e4998b48cd10026a3426caf5c6980a95b6ad2c1",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/buttons/index.html",
+      "type": "info",
+      "subType": "warning",
+      "message": "An “aria-disabled” attribute whose value is “true” should not be specified on an “a” element that has an “href” attribute.",
+      "highlightHTML": "<a href=\"#\" class=\"btn btn-secondary btn-lg disabled\" tabindex=\"-1\" role=\"button\" aria-disabled=\"true\">",
+      "extractHash": "5193daa23b3f4128c1fd5e33f1966d34820a517f80a42ebb7a16594b3afa1b3f",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/card/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "Element “img” is missing one or more of the following attributes: “src”, “srcset”.",
+      "highlightHTML": "<img class=\"card-img\" data-src=\"holder.js/100px260/\" alt=\"Card image\" />",
+      "extractHash": "18fbd177a1b6f6bcf8881003e93cc7966cbfafdd96a7bce2db24e7e320780e21",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/card/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "Element “img” is missing one or more of the following attributes: “src”, “srcset”.",
+      "highlightHTML": "<img class=\"card-img\" data-src=\"holder.js/100px270/#55595c:#373a3c/text:Card image\" alt=\"Card image\" />",
+      "extractHash": "d9c2d1038a536d85a9f660ddccacab4ab4fb4af226e39c41a3296979932c7ff3",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/card/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "Element “img” is missing one or more of the following attributes: “src”, “srcset”.",
+      "highlightHTML": "<img class=\"card-img-bottom\" data-src=\"holder.js/100px180/\" alt=\"Card image cap\" />",
+      "extractHash": "6bf0b1ef64c445ede3eb76763ba599a4c4ad518abef22a1386d1c3c9e20cd47a",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/card/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "Element “img” is missing one or more of the following attributes: “src”, “srcset”.",
+      "highlightHTML": "<img class=\"card-img-top\" data-src=\"holder.js/100px160/\" alt=\"Card image cap\" />",
+      "extractHash": "701a4da073fd8d74383c287897e3ea4c6a18334666aa4a5c1a3aa9fd3d2fb12f",
+      "count": 2
+    },
+    {
+      "path": "docs/4.0/components/card/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "Element “img” is missing one or more of the following attributes: “src”, “srcset”.",
+      "highlightHTML": "<img class=\"card-img-top\" data-src=\"holder.js/100px180/\" alt=\"Card image cap\" />",
+      "extractHash": "85d0f692dd291b2a324665e042dcc564e130d50c1c5693d723c8ef38a5fc663b",
+      "count": 11
+    },
+    {
+      "path": "docs/4.0/components/card/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "Element “img” is missing one or more of the following attributes: “src”, “srcset”.",
+      "highlightHTML": "<img class=\"card-img-top\" data-src=\"holder.js/100px180/?text=Image cap\" alt=\"Card image cap\" />",
+      "extractHash": "4c1f25e6b6a23517aec7130097b6795a6e5f1f685387cee2949b86555d60cd98",
+      "count": 2
+    },
+    {
+      "path": "docs/4.0/components/card/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "Element “img” is missing one or more of the following attributes: “src”, “srcset”.",
+      "highlightHTML": "<img class=\"card-img-top\" data-src=\"holder.js/100px200/\" alt=\"Card image cap\" />",
+      "extractHash": "5c2ceb2a25a788cf78f21c2110d0484bd18151737cbeef7825588f7b74b85bac",
+      "count": 3
+    },
+    {
+      "path": "docs/4.0/components/card/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The heading “h5” (with computed level 5) follows the heading “h2” (with computed level 2), skipping 2 heading levels.",
+      "highlightHTML": "<h5 class=\"card-title\">",
+      "extractHash": "2a4cf1207bd515b11ab7b6a6611e0a20a3298b2ba4f8b63bce85b2a5e2f0f48b",
+      "count": 3
+    },
+    {
+      "path": "docs/4.0/components/card/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The heading “h5” (with computed level 5) follows the heading “h3” (with computed level 3), skipping 1 heading level.",
+      "highlightHTML": "<h5 class=\"card-title\">",
+      "extractHash": "2a4cf1207bd515b11ab7b6a6611e0a20a3298b2ba4f8b63bce85b2a5e2f0f48b",
+      "count": 14
+    },
+    {
+      "path": "docs/4.0/components/card/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/carousel/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "Element “img” is missing one or more of the following attributes: “src”, “srcset”.",
+      "highlightHTML": "<img class=\"d-block w-100\" data-src=\"holder.js/800x400?auto=yes&amp;bg=555&amp;fg=333&amp;text=Third slide\" alt=\"Third slide\" />",
+      "extractHash": "622b5bc2b0e624cae5dd383539db5cd897186dbb548ef290a1d7d13ec3595fe1",
+      "count": 5
+    },
+    {
+      "path": "docs/4.0/components/carousel/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "Element “img” is missing one or more of the following attributes: “src”, “srcset”.",
+      "highlightHTML": "<img class=\"d-block w-100\" data-src=\"holder.js/800x400?auto=yes&amp;bg=666&amp;fg=444&amp;text=Second slide\" alt=\"Second slide\" />",
+      "extractHash": "f4c956b6a7674decd5b41838f22fdeda9bed9f3d500a230c684ebceafc1f6c7d",
+      "count": 5
+    },
+    {
+      "path": "docs/4.0/components/carousel/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "Element “img” is missing one or more of the following attributes: “src”, “srcset”.",
+      "highlightHTML": "<img class=\"d-block w-100\" data-src=\"holder.js/800x400?auto=yes&amp;bg=777&amp;fg=555&amp;text=First slide\" alt=\"First slide\" />",
+      "extractHash": "11bb3f3ad36840a78b288c39f5f0297db5d58d189d5f2a591deb4fccbf3a136e",
+      "count": 5
+    },
+    {
+      "path": "docs/4.0/components/carousel/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The heading “h5” (with computed level 5) follows the heading “h3” (with computed level 3), skipping 1 heading level.",
+      "highlightHTML": "<h5>",
+      "extractHash": "677dfc8a2943b6c313cb2b62c60987f7e9ef83cc23a635043953407a08752f6c",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/carousel/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/collapse/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The heading “h5” (with computed level 5) follows the heading “h2” (with computed level 2), skipping 2 heading levels.",
+      "highlightHTML": "<h5 class=\"mb-0\">",
+      "extractHash": "f1358973517d9a447656fe866887241e1d3355f7ccbffbdbaf7dc7776b9d275d",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/collapse/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/collapse/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div id=\"collapseOne\" class=\"collapse show\" aria-labelledby=\"headingOne\" data-parent=\"#accordion\">",
+      "extractHash": "5072f5a052838a233dd0767980502be89add6de8273af8c4e294d434f6525abb",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/collapse/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div id=\"collapseThree\" class=\"collapse\" aria-labelledby=\"headingThree\" data-parent=\"#accordion\">",
+      "extractHash": "4b5068d908f57b1c7b05d2dff3b2af22ed28309cf2fbda5f3a324b3d768758fa",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/collapse/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div id=\"collapseTwo\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordion\">",
+      "extractHash": "9cd8db7b3a185dca2585a9e8aa022edd2becd5bca01c4ed4d51d503aeb9a0d7d",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/dropdowns/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The heading “h5” (with computed level 5) follows the heading “h3” (with computed level 3), skipping 1 heading level.",
+      "highlightHTML": "<h5 id=\"data-toggledropdown-still-required\">",
+      "extractHash": "7669a6a87e696a8d34a6e1143c362af5ba34ea6b58e7d2031d9caf8430c2ff96",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/dropdowns/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The heading “h6” (with computed level 6) follows the heading “h3” (with computed level 3), skipping 2 heading levels.",
+      "highlightHTML": "<h6 class=\"dropdown-header\">",
+      "extractHash": "fcb94fe4251e6868ce5133ae9b65411014693a1780c000dbf90468159abbe90b",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/dropdowns/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/dropdowns/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenu2\">",
+      "extractHash": "cc3a96fa12233d59e3875a96f241d48274d7583bf4bc2728896d2cd7acad688a",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/dropdowns/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">",
+      "extractHash": "a412234960eadb20ea203467230ca305de71d45582b2a23fd357e304c85bf435",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/dropdowns/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuLink\">",
+      "extractHash": "4433a6fc4a256a513ed1cf66ef87b7fd18177d50709511d2765c3c29d4373ab3",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/dropdowns/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuOffset\">",
+      "extractHash": "2511689fd6529ce65613ef82f500eb8bd3736b82463a3b02cbcffd5010a3b399",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/dropdowns/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuReference\">",
+      "extractHash": "3c04a9cbf0604efcec51794492db89422140b40d764059e73f21017b82a1dc26",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/forms/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "Element “legend” not allowed as child of element “div” in this context. (Suppressing further errors from this subtree.)",
+      "highlightHTML": "<legend class=\"col-form-label col-sm-2 pt-0\">",
+      "extractHash": "7be5acf608e08b141c64fbe9438b1aa49cfaf01b0e547ec1fed018195470a712",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/forms/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The heading “h5” (with computed level 5) follows the heading “h2” (with computed level 2), skipping 2 heading levels.",
+      "highlightHTML": "<h5 id=\"associating-help-text-with-form-controls\">",
+      "extractHash": "d6551dead12020cd5196faf173a4b32292da0a0d2681300b1cf60f546b39e389",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/forms/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The heading “h5” (with computed level 5) follows the heading “h2” (with computed level 2), skipping 2 heading levels.",
+      "highlightHTML": "<h5 id=\"caveat-with-anchors\">",
+      "extractHash": "642f63dae6498d2d2ea929bdb9b560a549b2d5ba454ab9262ad8ccf0808024d9",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/forms/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The heading “h5” (with computed level 5) follows the heading “h3” (with computed level 3), skipping 1 heading level.",
+      "highlightHTML": "<h5 id=\"alternatives-to-hidden-labels\">",
+      "extractHash": "ad73dc3eedcfd4d60bb43024f5c49b5cab33318d6562a62089fcec80545809d3",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/forms/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/input-group/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/jumbotron/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/list-group/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The heading “h5” (with computed level 5) follows the heading “h2” (with computed level 2), skipping 2 heading levels.",
+      "highlightHTML": "<h5 class=\"mb-1\">",
+      "extractHash": "bfab08311d7166eb6a0a8f1c2b06c4695bc23663c4e4c19ae2bbf87d8cf0da6e",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/list-group/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The heading “h5” (with computed level 5) follows the heading “h2” (with computed level 2), skipping 2 heading levels.",
+      "highlightHTML": "<h5 id=\"conveying-meaning-to-assistive-technologies\">",
+      "extractHash": "26c12bf892eabbe81eaf0ac76ea1631f38a734ff7e573c0fbddb970dfc1782e2",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/list-group/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/modal/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The heading “h5” (with computed level 5) follows the heading “h2” (with computed level 2), skipping 2 heading levels.",
+      "highlightHTML": "<h5 class=\"modal-title h4\" id=\"myLargeModalLabel\">",
+      "extractHash": "d77d6a0f170453a5cfbe28af4cba8defef7b6a36ad66fb20f39aa42e4cdbb5b9",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/modal/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The heading “h5” (with computed level 5) follows the heading “h3” (with computed level 3), skipping 1 heading level.",
+      "highlightHTML": "<h5 class=\"modal-title\" id=\"exampleModalCenterTitle\">",
+      "extractHash": "1ae74b94fd8598ef271c78b9397454979becd7b45f161c9829a614ac149c2c63",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/modal/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The heading “h5” (with computed level 5) follows the heading “h3” (with computed level 3), skipping 1 heading level.",
+      "highlightHTML": "<h5 class=\"modal-title\" id=\"exampleModalLabel\">",
+      "extractHash": "a9109f9dd28f322914a0c1cfeabb1ca3052e34505985839c2590fa7b2f19b026",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/modal/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The heading “h5” (with computed level 5) follows the heading “h3” (with computed level 3), skipping 1 heading level.",
+      "highlightHTML": "<h5 class=\"modal-title\" id=\"exampleModalLiveLabel\">",
+      "extractHash": "5ec08236a13fb0afae0e523643ea30c53566371fe5d4f3da681b12bf1d2891b4",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/modal/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The heading “h5” (with computed level 5) follows the heading “h3” (with computed level 3), skipping 1 heading level.",
+      "highlightHTML": "<h5 class=\"modal-title\" id=\"exampleModalLongTitle\">",
+      "extractHash": "7ba41a58b23c86766b426d9210419733b7ed856099b3f761d67e9b80f999d3d2",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/modal/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The heading “h5” (with computed level 5) follows the heading “h3” (with computed level 3), skipping 1 heading level.",
+      "highlightHTML": "<h5 class=\"modal-title\" id=\"exampleModalPopoversLabel\">",
+      "extractHash": "5e8a1e625c83a1fcf2f8e99dffe3bab7f776e95760f304ba62a8983861e012ff",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/modal/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The heading “h5” (with computed level 5) follows the heading “h3” (with computed level 3), skipping 1 heading level.",
+      "highlightHTML": "<h5 class=\"modal-title\" id=\"gridModalLabel\">",
+      "extractHash": "d899d6b3fed63cf21c5802c880a475c03eb86a613fec0107926b4f5ddb323ddb",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/modal/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The heading “h5” (with computed level 5) follows the heading “h3” (with computed level 3), skipping 1 heading level.",
+      "highlightHTML": "<h5 class=\"modal-title\">",
+      "extractHash": "33a31cf88a7a2bf9cbb0e31b3b7fe67bfa55b439e002b73d5e5700770e163721",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/modal/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/navbar/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The heading “h5” (with computed level 5) follows the heading “h3” (with computed level 3), skipping 1 heading level.",
+      "highlightHTML": "<h5 class=\"text-white h4\">",
+      "extractHash": "c0326990635c29bc62bfb8d8718161937a631058410b9736d6186479845b789b",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/navbar/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/navbar/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">",
+      "extractHash": "4161ab5d17523e143e0a69e29b9bea79b48c8636616870d5d0ecac4070d3a597",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/navbar/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdownMenuLink\">",
+      "extractHash": "cb56acb50acfc7503b7542cd49dd9d2ed5fd38f1c961e8434171124872acb7b9",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/navs/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/pagination/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/popovers/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/progress/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/scrollspy/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The heading “h4” (with computed level 4) follows the heading “h2” (with computed level 2), skipping 1 heading level.",
+      "highlightHTML": "<h4 id=\"fat\">",
+      "extractHash": "eafd0d35131bba2a3e59fafe89cb924b109407d99e61fc8634500fd124e30361",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/scrollspy/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The heading “h4” (with computed level 4) follows the heading “h2” (with computed level 2), skipping 1 heading level.",
+      "highlightHTML": "<h4 id=\"item-1\">",
+      "extractHash": "a9b65cccf3b53e2822d050a33d04cddd1e4f5dc552754ce2313094eef9ebc739",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/scrollspy/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The heading “h4” (with computed level 4) follows the heading “h2” (with computed level 2), skipping 1 heading level.",
+      "highlightHTML": "<h4 id=\"list-item-1\">",
+      "extractHash": "48216f6fb631113f00630cd5c279c19b96c5916c4a3cb9b65fe94a953df48c6b",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/scrollspy/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/scrollspy/index.html",
+      "type": "info",
+      "subType": "warning",
+      "message": "This document appears to be written in Lorem ipsum text but the “html” start tag has “lang=\"en\"”. Consider using “lang=\"zxx\"” (or variant) instead.",
+      "highlightHTML": "\n<html lang=\"en\">",
+      "extractHash": "03412e8f796b48147422ae646516ce148a6298aff81df512965c711fc845c43e",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/tooltips/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The heading “h5” (with computed level 5) follows the heading “h3” (with computed level 3), skipping 1 heading level.",
+      "highlightHTML": "<h5 id=\"making-tooltips-work-for-keyboard-and-assistive-technology-users\">",
+      "extractHash": "46998f2d3e1045a760704e652e5af2d8c58021e5e5e4b323c7a65a58d855eeb0",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/components/tooltips/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/content/code/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/content/figures/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "Element “img” is missing one or more of the following attributes: “src”, “srcset”.",
+      "highlightHTML": "<img data-src=\"holder.js/400x300\" class=\"figure-img img-fluid rounded\" alt=\"A generic square placeholder image with rounded corners in a figure.\" />",
+      "extractHash": "fe4c87c3c337dad99ec0bed8ed5095674e5c87fc64bcfd5bc5ab7ea67e92a727",
+      "count": 2
+    },
+    {
+      "path": "docs/4.0/content/figures/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/content/images/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "Element “img” is missing one or more of the following attributes: “src”, “srcset”.",
+      "highlightHTML": "<img data-src=\"holder.js/100px250\" class=\"img-fluid\" alt=\"Generic responsive image\" />",
+      "extractHash": "5eb86ef7d2f1ba6ca030005223a3267dc5b488549986c459a116da4406f03d57",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/content/images/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "Element “img” is missing one or more of the following attributes: “src”, “srcset”.",
+      "highlightHTML": "<img data-src=\"holder.js/200x200\" class=\"img-thumbnail\" alt=\"A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera\" />",
+      "extractHash": "ce13f95352b7b18b4a71a9ac23dd0e389d9dbea8f7ed4f59e8e7c01033cf4ee3",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/content/images/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "Element “img” is missing one or more of the following attributes: “src”, “srcset”.",
+      "highlightHTML": "<img data-src=\"holder.js/200x200\" class=\"rounded float-left\" alt=\"A generic square placeholder image with rounded corners\" />",
+      "extractHash": "9f11fb3f93c1d706031fe14f7c86dc2eb448811186fc6d75542ed0fb41c433d6",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/content/images/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "Element “img” is missing one or more of the following attributes: “src”, “srcset”.",
+      "highlightHTML": "<img data-src=\"holder.js/200x200\" class=\"rounded float-right\" alt=\"A generic square placeholder image with rounded corners\" />",
+      "extractHash": "5bfe6136cebd5a7c513b0198367a71cfbd4f0aa455f595bcc273615152a39112",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/content/images/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "Element “img” is missing one or more of the following attributes: “src”, “srcset”.",
+      "highlightHTML": "<img data-src=\"holder.js/200x200\" class=\"rounded mx-auto d-block\" alt=\"A generic square placeholder image with rounded corners\" />",
+      "extractHash": "11c3460bcbbde8ff906a4ed0893352f0fbf05bd6465f4e78afc7746f0724940d",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/content/images/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "Element “img” is missing one or more of the following attributes: “src”, “srcset”.",
+      "highlightHTML": "<img data-src=\"holder.js/200x200\" class=\"rounded\" alt=\"A generic square placeholder image with rounded corners\" />",
+      "extractHash": "f72ec26063b28f7d1231e5a66217d8a851d487a3933db94fbcbdb904343b9583",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/content/images/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The heading “h5” (with computed level 5) follows the heading “h2” (with computed level 2), skipping 2 heading levels.",
+      "highlightHTML": "<h5 id=\"svg-images-and-ie-10\">",
+      "extractHash": "323a7cc70e7d5f3809e51d1cc10bbd4448f744eb09234beddb6ada0a3d9f992f",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/content/images/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/content/reboot/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The heading “h5” (with computed level 5) follows the heading “h2” (with computed level 2), skipping 2 heading levels.",
+      "highlightHTML": "<h5 id=\"jquery-incompatibility\">",
+      "extractHash": "2857edb64007d74c56ab2b1cdbd9cb5cf8e087a3cc273d51aa80b51981e565be",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/content/reboot/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/content/tables/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The heading “h5” (with computed level 5) follows the heading “h2” (with computed level 2), skipping 2 heading levels.",
+      "highlightHTML": "<h5 id=\"conveying-meaning-to-assistive-technologies\">",
+      "extractHash": "26c12bf892eabbe81eaf0ac76ea1631f38a734ff7e573c0fbddb970dfc1782e2",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/content/tables/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The heading “h5” (with computed level 5) follows the heading “h2” (with computed level 2), skipping 2 heading levels.",
+      "highlightHTML": "<h5 id=\"vertical-clippingtruncation\">",
+      "extractHash": "ac9eb681a6967d3277c72284811d795ffb5626d975a9a5bd768a8f7a7366515d",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/content/tables/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/content/typography/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/examples/album/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "Element “img” is missing one or more of the following attributes: “src”, “srcset”.",
+      "highlightHTML": "<img class=\"card-img-top\" data-src=\"holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail\" alt=\"Card image cap\">",
+      "extractHash": "3723a3305bb2d508f179936c220198de46dbf33b6e33f7cfa4a3d20b6135f2a5",
+      "count": 9
+    },
+    {
+      "path": "docs/4.0/examples/blog/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "Element “img” is missing one or more of the following attributes: “src”, “srcset”.",
+      "highlightHTML": "<img class=\"card-img-right flex-auto d-none d-lg-block\" data-src=\"holder.js/200x250?theme=thumb\" alt=\"Card image cap\">",
+      "extractHash": "1ebaa6a1b742bf3ad5bf60f297593bb2b4702d73ffda8688fc563ac420edf365",
+      "count": 2
+    },
+    {
+      "path": "docs/4.0/examples/blog/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The heading “h3” (with computed level 3) follows the heading “h1” (with computed level 1), skipping 1 heading level.",
+      "highlightHTML": "<h3 class=\"mb-0\">",
+      "extractHash": "41d6888796cea16540f599990cb2b72aeab1d544bcd36219e6af045fe22ad5d4",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/examples/blog/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The heading “h4” (with computed level 4) follows the heading “h2” (with computed level 2), skipping 1 heading level.",
+      "highlightHTML": "<h4 class=\"font-italic\">",
+      "extractHash": "b2bc06847a7234224f975cd47ad8c3ab8216fa766f125d47ff6c187db1db0990",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/examples/carousel/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "Element “img” is missing one or more of the following attributes: “src”, “srcset”.",
+      "highlightHTML": "<img class=\"featurette-image img-fluid mx-auto\" data-src=\"holder.js/500x500/auto\" alt=\"Generic placeholder image\">",
+      "extractHash": "e122298e0f24df4798ccf313f1dc118dcb6d94c995655d6d1719b9d6d4afd7a4",
+      "count": 3
+    },
+    {
+      "path": "docs/4.0/examples/checkout/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The heading “h4” (with computed level 4) follows the heading “h2” (with computed level 2), skipping 1 heading level.",
+      "highlightHTML": "<h4 class=\"d-flex justify-content-between align-items-center mb-3\">",
+      "extractHash": "5d78fdfae24b78b2fe1f0aa0676c4193a02db83a31d079b95f892b898ff0c494",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/examples/checkout/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The heading “h6” (with computed level 6) follows the heading “h4” (with computed level 4), skipping 1 heading level.",
+      "highlightHTML": "<h6 class=\"my-0\">",
+      "extractHash": "c5223d66b36d04c31bc582553fb5c830abcc3402f606beabc17d9511ee44bd66",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/examples/checkout/index.html",
+      "type": "info",
+      "subType": "warning",
+      "message": "This document has heading elements but none of them has a computed heading level of 1.",
+      "highlightHTML": "<h2>",
+      "extractHash": "021eeeec53e9a6f680241631fb7dacae273f928835797da4633d2967dda4f1e7",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/examples/grid/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The heading “h3” (with computed level 3) follows the heading “h1” (with computed level 1), skipping 1 heading level.",
+      "highlightHTML": "<h3>",
+      "extractHash": "8b10d3b63eabe8f7123882dde4337ec3607da1c3f5330ef7647e749b7ea60693",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/examples/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The heading “h5” (with computed level 5) follows the heading “h2” (with computed level 2), skipping 2 heading levels.",
+      "highlightHTML": "<h5 class=\"mb-1\">",
+      "extractHash": "bfab08311d7166eb6a0a8f1c2b06c4695bc23663c4e4c19ae2bbf87d8cf0da6e",
+      "count": 4
+    },
+    {
+      "path": "docs/4.0/examples/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/examples/jumbotron/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu\" aria-labelledby=\"dropdown01\">",
+      "extractHash": "afa32c83eed2567bf4256b35d4295d4a56a134315f2ec0efce54ce8b6512ee49",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/examples/navbar-bottom/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu\" aria-labelledby=\"dropdown10\">",
+      "extractHash": "3c35332e4f171b53b5bd5e9463839b72afebaa32d7ea9e3d71340f549f3c552f",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/examples/navbars/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu\" aria-labelledby=\"dropdown01\">",
+      "extractHash": "afa32c83eed2567bf4256b35d4295d4a56a134315f2ec0efce54ce8b6512ee49",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/examples/navbars/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu\" aria-labelledby=\"dropdown03\">",
+      "extractHash": "f8ee77bd220e3ddfe01b9c5ff66fe67fa658ae5f32d422976fe07c93eebee1d1",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/examples/navbars/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu\" aria-labelledby=\"dropdown04\">",
+      "extractHash": "f9bbe05cee008ca1547707b146f381420d30fade333497362aa2d733a95e5b66",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/examples/navbars/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu\" aria-labelledby=\"dropdown05\">",
+      "extractHash": "6f07858ded5f51aea4c77bf327bfda5d33e8cbd2b51ef997931ae2faeadc2cf1",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/examples/navbars/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu\" aria-labelledby=\"dropdown06\">",
+      "extractHash": "cf70b56ce53c1e55b3f30f99e4362964ea42d13bb258e640bb9b145d2f5ff2fe",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/examples/navbars/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu\" aria-labelledby=\"dropdown07\">",
+      "extractHash": "c6c37abc1c8d5a6fff21ee3e7743fffdb71e63bd20218fb4214722bcefbf5c46",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/examples/navbars/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu\" aria-labelledby=\"dropdown08\">",
+      "extractHash": "70cb7ece32ac6e7589c6a27b29174b5458e0f24be007e0cd044e561cf8c32ee4",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/examples/navbars/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu\" aria-labelledby=\"dropdown09\">",
+      "extractHash": "0f19928f807c4faf96a76bbdca1cb3bd3397b773e6897296f545b24d436fda71",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/examples/navbars/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu\" aria-labelledby=\"dropdown10\">",
+      "extractHash": "3c35332e4f171b53b5bd5e9463839b72afebaa32d7ea9e3d71340f549f3c552f",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/examples/offcanvas/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "Element “img” is missing one or more of the following attributes: “src”, “srcset”.",
+      "highlightHTML": "<img data-src=\"holder.js/32x32?theme=thumb&bg=007bff&fg=007bff&size=1\" alt=\"\" class=\"mr-2 rounded\">",
+      "extractHash": "88c2bbdaa5bdb193ec4282b69e6777044ba2901f35eaf68ff30ebb9b84eb2f50",
+      "count": 4
+    },
+    {
+      "path": "docs/4.0/examples/offcanvas/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "Element “img” is missing one or more of the following attributes: “src”, “srcset”.",
+      "highlightHTML": "<img data-src=\"holder.js/32x32?theme=thumb&bg=6f42c1&fg=6f42c1&size=1\" alt=\"\" class=\"mr-2 rounded\">",
+      "extractHash": "fa3b92e00ce5456d7d624a33a008359a3bc44590ff0632c8cd346a5cadd34e3c",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/examples/offcanvas/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "Element “img” is missing one or more of the following attributes: “src”, “srcset”.",
+      "highlightHTML": "<img data-src=\"holder.js/32x32?theme=thumb&bg=e83e8c&fg=e83e8c&size=1\" alt=\"\" class=\"mr-2 rounded\">",
+      "extractHash": "39cfc4889e49ff0f25b43f9f43b2377189fa5530656f57e7b90858d8b08b43ae",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/examples/offcanvas/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu\" aria-labelledby=\"dropdown01\">",
+      "extractHash": "afa32c83eed2567bf4256b35d4295d4a56a134315f2ec0efce54ce8b6512ee49",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/examples/offcanvas/index.html",
+      "type": "info",
+      "subType": "warning",
+      "message": "This document has heading elements but none of them has a computed heading level of 1.",
+      "highlightHTML": "<h6 class=\"mb-0 text-white lh-100\">",
+      "extractHash": "4fa1fbc921dd99587a5cc04fbf611b07088042fb0affefb76c03c186743ddbdf",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/examples/pricing/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The heading “h4” (with computed level 4) follows the heading “h1” (with computed level 1), skipping 2 heading levels.",
+      "highlightHTML": "<h4 class=\"my-0 font-weight-normal\">",
+      "extractHash": "4237f16c0950e9ea28000089077c6b5d01761e0d83177344ac23af3ddd67e5d0",
+      "count": 3
+    },
+    {
+      "path": "docs/4.0/examples/pricing/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The heading “h5” (with computed level 5) follows the heading “h1” (with computed level 1), skipping 3 heading levels.",
+      "highlightHTML": "<h5>",
+      "extractHash": "677dfc8a2943b6c313cb2b62c60987f7e9ef83cc23a635043953407a08752f6c",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/examples/product/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The heading “h5” (with computed level 5) follows the heading “h2” (with computed level 2), skipping 2 heading levels.",
+      "highlightHTML": "<h5>",
+      "extractHash": "677dfc8a2943b6c313cb2b62c60987f7e9ef83cc23a635043953407a08752f6c",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/examples/starter-template/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu\" aria-labelledby=\"dropdown01\">",
+      "extractHash": "afa32c83eed2567bf4256b35d4295d4a56a134315f2ec0efce54ce8b6512ee49",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/extend/approach/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/extend/icons/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/extend/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/getting-started/accessibility/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/getting-started/best-practices/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The heading “h3” (with computed level 3) follows the heading “h1” (with computed level 1), skipping 1 heading level.",
+      "highlightHTML": "<h3 id=\"general-outline\">",
+      "extractHash": "3c74153ede9e15d23d524b55093d8c792e7656663715660fd32abc03ffd601b4",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/getting-started/best-practices/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/getting-started/browsers-devices/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The heading “h4” (with computed level 4) follows the heading “h2” (with computed level 2), skipping 1 heading level.",
+      "highlightHTML": "<h4 id=\"select-menu\">",
+      "extractHash": "be706544fab1a0dce16368d1ea817136bdc4505147605766e50ff8d98501ab67",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/getting-started/browsers-devices/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/getting-started/build-tools/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/getting-started/contents/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/getting-started/download/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/getting-started/introduction/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/getting-started/javascript/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The heading “h5” (with computed level 5) follows the heading “h2” (with computed level 2), skipping 2 heading levels.",
+      "highlightHTML": "<h5 id=\"escaping-selectors\">",
+      "extractHash": "2e7afaefef11fe30e7e48e59274d8346f14c45a7adee3adc2afa1c3ccaeb8d9e",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/getting-started/javascript/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The heading “h5” (with computed level 5) follows the heading “h2” (with computed level 2), skipping 2 heading levels.",
+      "highlightHTML": "<h5 id=\"third-party-libraries\">",
+      "extractHash": "451469cfddcac42f735b11831933ba6482ad381f918f775eda0dfa58519eb7b6",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/getting-started/javascript/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/getting-started/theming/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/getting-started/webpack/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/layout/grid/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/layout/media-object/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "Element “img” is missing one or more of the following attributes: “src”, “srcset”.",
+      "highlightHTML": "<img class=\"align-self-center mr-3\" data-src=\"holder.js/64x64\" alt=\"Generic placeholder image\" />",
+      "extractHash": "b9becf39d22c30fe4d3927293251f2c7841ea97765507f0ef3aea366a8b74feb",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/layout/media-object/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "Element “img” is missing one or more of the following attributes: “src”, “srcset”.",
+      "highlightHTML": "<img class=\"align-self-end mr-3\" data-src=\"holder.js/64x64\" alt=\"Generic placeholder image\" />",
+      "extractHash": "d5089dc24ac0f319e89d81185a59ef9a35066e11f8b7e5271bc827a128d65a09",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/layout/media-object/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "Element “img” is missing one or more of the following attributes: “src”, “srcset”.",
+      "highlightHTML": "<img class=\"align-self-start mr-3\" data-src=\"holder.js/64x64\" alt=\"Generic placeholder image\" />",
+      "extractHash": "19b45ae7f5b06f13bc996962522d90df4434a3c22d60562c20582d6abb50670c",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/layout/media-object/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "Element “img” is missing one or more of the following attributes: “src”, “srcset”.",
+      "highlightHTML": "<img class=\"ml-3\" data-src=\"holder.js/64x64\" alt=\"Generic placeholder image\" />",
+      "extractHash": "21b12f253f8a61402a4d74ea997a79e14db8410423a7a2a06edddd2eff95ab50",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/layout/media-object/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "Element “img” is missing one or more of the following attributes: “src”, “srcset”.",
+      "highlightHTML": "<img class=\"mr-3\" data-src=\"holder.js/64x64\" alt=\"Generic placeholder image\" />",
+      "extractHash": "0d159881514c803207402b55f249dac559652babf2600e52349fa93b55467cc6",
+      "count": 5
+    },
+    {
+      "path": "docs/4.0/layout/media-object/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "Element “img” is missing one or more of the following attributes: “src”, “srcset”.",
+      "highlightHTML": "<img data-src=\"holder.js/64x64\" alt=\"Generic placeholder image\" />",
+      "extractHash": "fabae92f068a47a131fa4bcf11de64bb12ad0db79389bbb43e207f9780b9af4f",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/layout/media-object/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The heading “h5” (with computed level 5) follows the heading “h2” (with computed level 2), skipping 2 heading levels.",
+      "highlightHTML": "<h5 class=\"mt-0 mb-1\">",
+      "extractHash": "791f83f03af4c291ca136f788a783a699bb134cdec139717bafc537f9c523963",
+      "count": 2
+    },
+    {
+      "path": "docs/4.0/layout/media-object/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The heading “h5” (with computed level 5) follows the heading “h2” (with computed level 2), skipping 2 heading levels.",
+      "highlightHTML": "<h5 class=\"mt-0\">",
+      "extractHash": "df977e67ca1b3441e900f2db0b8d546649eb248b6e37ea69a5beb07e1e55834d",
+      "count": 3
+    },
+    {
+      "path": "docs/4.0/layout/media-object/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/layout/overview/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/layout/utilities-for-layout/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/migration/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/utilities/borders/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "Element “img” is missing one or more of the following attributes: “src”, “srcset”.",
+      "highlightHTML": "<img data-src=\"holder.js/75x75\" class=\"rounded\" alt=\"Example rounded image\" />",
+      "extractHash": "2fbac6401e4e70a519ebce0b0e6b8df279731be04d5a487d98b100d14caf2275",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/utilities/borders/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "Element “img” is missing one or more of the following attributes: “src”, “srcset”.",
+      "highlightHTML": "<img data-src=\"holder.js/75x75\" class=\"rounded-0\" alt=\"Example non-rounded image (overrides rounding applied elsewhere)\" />",
+      "extractHash": "019b36ef151bc1076aaa7256871ee48e79849cbd8750ad672710b31478436ace",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/utilities/borders/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "Element “img” is missing one or more of the following attributes: “src”, “srcset”.",
+      "highlightHTML": "<img data-src=\"holder.js/75x75\" class=\"rounded-bottom\" alt=\"Example bottom rounded image\" />",
+      "extractHash": "74df47bd5af3c76309f7873bc35be143ebb1807b443486a5fa29a06f385e697d",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/utilities/borders/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "Element “img” is missing one or more of the following attributes: “src”, “srcset”.",
+      "highlightHTML": "<img data-src=\"holder.js/75x75\" class=\"rounded-circle\" alt=\"Completely round image\" />",
+      "extractHash": "6bf3193d4c0dbd1669088217198e2d612b765492e50c3e0cf8f1172f70cb78fe",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/utilities/borders/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "Element “img” is missing one or more of the following attributes: “src”, “srcset”.",
+      "highlightHTML": "<img data-src=\"holder.js/75x75\" class=\"rounded-left\" alt=\"Example left rounded image\" />",
+      "extractHash": "a80e4fda66a0211c88f6e60d2402de5f8a28c5a889bb2d92ca4a0eaa46561555",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/utilities/borders/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "Element “img” is missing one or more of the following attributes: “src”, “srcset”.",
+      "highlightHTML": "<img data-src=\"holder.js/75x75\" class=\"rounded-right\" alt=\"Example right rounded image\" />",
+      "extractHash": "c362220aa9b5d47d4ee6a4faf16b85d99fe07a3953e4a5fe97b7b08ad54650b1",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/utilities/borders/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "Element “img” is missing one or more of the following attributes: “src”, “srcset”.",
+      "highlightHTML": "<img data-src=\"holder.js/75x75\" class=\"rounded-top\" alt=\"Example top rounded image\" />",
+      "extractHash": "f869bcc4560cc4811d3b10df5867d4323d5111b4c4635e1c786e8ba71dad45e8",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/utilities/borders/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/utilities/clearfix/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/utilities/close-icon/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/utilities/colors/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The heading “h4” (with computed level 4) follows the heading “h2” (with computed level 2), skipping 1 heading level.",
+      "highlightHTML": "<h4 id=\"dealing-with-specificity\">",
+      "extractHash": "f62333f8ec75c452a06eabb1437972bb2cb5a5c2f8052147e6bed524bdb57273",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/utilities/colors/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/utilities/display/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/utilities/embed/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/utilities/flex/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/utilities/float/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/utilities/image-replacement/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/utilities/position/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/utilities/screenreaders/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/utilities/shadows/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/utilities/sizing/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "Element “img” is missing one or more of the following attributes: “src”, “srcset”.",
+      "highlightHTML": "<img class=\"mw-100\" data-src=\"holder.js/1000px100?text=Max-width%20%3D%20100%25\" alt=\"Max-width 100%\" />",
+      "extractHash": "799c5170de471a52cd907dfd7aac2fef2c90a5a425dbaaadaa2bfb1844ed63cf",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/utilities/sizing/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/utilities/spacing/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/utilities/text/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/utilities/vertical-align/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "docs/4.0/utilities/visibility/index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    },
+    {
+      "path": "index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The heading “h3” (with computed level 3) follows the heading “h1” (with computed level 1), skipping 1 heading level.",
+      "highlightHTML": "<h3>",
+      "extractHash": "8b10d3b63eabe8f7123882dde4337ec3607da1c3f5330ef7647e749b7ea60693",
+      "count": 1
+    },
+    {
+      "path": "index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The heading “h5” (with computed level 5) follows the heading “h3” (with computed level 3), skipping 1 heading level.",
+      "highlightHTML": "<h5>",
+      "extractHash": "677dfc8a2943b6c313cb2b62c60987f7e9ef83cc23a635043953407a08752f6c",
+      "count": 1
+    },
+    {
+      "path": "index.html",
+      "type": "error",
+      "subType": null,
+      "message": "The “aria-labelledby” attribute must not be specified on any “div” element unless the element has a “role” value other than “caption”, “code”, “deletion”, “emphasis”, “generic”, “insertion”, “paragraph”, “presentation”, “strong”, “subscript”, or “superscript”.",
+      "highlightHTML": "<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"bd-versions\">",
+      "extractHash": "f9e8378ecb68bf8c8ebbb87886d47ae3e73c205f3e6269a267e994b4f9cc4f80",
+      "count": 1
+    }
+  ]
+}

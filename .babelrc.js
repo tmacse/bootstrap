@@ -1,4 +1,6 @@
 module.exports = {
+  comments: false,
+  shouldPrintComment: (comment) => /@license|@preserve|Copyright|Licensed under/.test(comment),
   presets: [
     [
       '@babel/env',
@@ -10,8 +12,7 @@ module.exports = {
     ]
   ],
   plugins: [
-    process.env.PLUGINS && 'transform-es2015-modules-strip',
-    '@babel/proposal-object-rest-spread'
+    process.env.PLUGINS && 'transform-es2015-modules-strip'
   ].filter(Boolean),
   env: {
     test: {

@@ -4,5 +4,6 @@
     "_gh_pages/**/*.{html,css,js,json,png,svg}"
   ],
   "swSrc": "./sw.js",
-  "swDest": "./_gh_pages/sw.js"
+  "swDest": "./_gh_pages/sw.js",
+  "injectionPoint": "[]"
 }

@@ -10,11 +10,21 @@
 'use strict'
 
 const childProcess = require('child_process')
+const path = require('path')
 const vnu = require('vnu-jar')
+const vnuVersion = require('vnu-jar/package.json').version
+const baseline = require('./vnu-legacy-baseline.json')
+const legacy = require('./vnu-legacy')
 
-childProcess.exec('java -version', (error, stdout, stderr) => {
+childProcess.execFile('java', ['-version'], (error, stdout, stderr) => {
   if (error) {
-    console.error('Skipping vnu-jar test; Java is missing.')
+    console.error('VNU check failed: Java is unavailable.')
+    process.exitCode = 1
+    return
+  }
+  if (baseline.checkerVersion !== vnuVersion) {
+    console.error('VNU checker version differs from the reviewed legacy baseline.')
+    process.exitCode = 1
     return
   }
 
@@ -47,10 +57,14 @@ childProcess.exec('java -version', (error, stdout, stderr) => {
   const args = [
     '-jar',
     vnu,
-    '--asciiquotes',
+    // Keep the canonical JSON message text used by the reference signatures.
+    '--format',
+    'json',
+    '--stdout',
     '--skip-non-html',
     '--Werror',
-    `--filterpattern "${ignores}"`,
+    '--filterpattern',
+    ignores,
     '_gh_pages/',
     'js/tests/'
   ]
@@ -60,9 +74,43 @@ childProcess.exec('java -version', (error, stdout, stderr) => {
     args.splice(0, 0, '-Xss512k')
   }
 
-  return childProcess.spawn('java', args, {
-    shell: true,
-    stdio: 'inherit'
+  // Only fixed reference diagnostics are grandfathered; new warnings still fail --Werror.
+  const checker = childProcess.spawn('java', args)
+  let output = ''
+  let diagnostics = ''
+  checker.stdout.on('data', (data) => {
+    output += data
   })
-    .on('exit', process.exit)
+  checker.stderr.on('data', (data) => {
+    diagnostics += data
+  })
+  checker.on('error', (failure) => {
+    console.error(`VNU check failed: ${failure.message}`)
+    process.exitCode = 1
+  })
+  checker.on('close', (code) => {
+    try {
+      const result = legacy.evaluate(output, code, baseline, [
+        {
+          directory: path.resolve('_gh_pages'),
+          prefix: ''
+        },
+        {
+          directory: path.resolve('js/tests'),
+          prefix: 'js/tests/'
+        }
+      ])
+      console.log(`VNU: ${result.known} known legacy diagnostics; ${result.unexpected.length} new diagnostics.`)
+      result.unexpected.forEach((message) => {
+        console.error(`${message.path || message.url || '(validator)'}: ${message.message}`)
+      })
+      process.exitCode = result.passed ? 0 : 1
+    } catch (failure) {
+      console.error(`VNU check failed: ${failure.message}`)
+      if (diagnostics) {
+        console.error(diagnostics)
+      }
+      process.exitCode = 1
+    }
+  })
 })

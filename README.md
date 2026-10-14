@@ -109,11 +109,14 @@ Documentation search is powered by [Algolia's DocSearch](https://community.algol
 
 ### Running documentation locally
 
-1. Run through the [tooling setup](https://getbootstrap.com/docs/4.0/getting-started/build-tools/#tooling-setup) to install Jekyll (the site builder) and other Ruby dependencies with `bundle install`.
-2. Run `npm install` to install Node.js dependencies.
+1. Use Ruby 3.4.11 (the version in `.ruby-version`) and Bundler 2.6.9, then run `bundle install` to install Jekyll and the locked Ruby dependencies. See [Ruby documentation toolchain](build/RUBY-SECURITY.md) for dependency audit and documentation checks.
+2. Use Node.js 22.13 or newer (`nvm use` reads the repository `.nvmrc`), then run `npm ci` to install the locked build dependencies. Browser bundles keep their existing browser targets; this Node requirement applies to building from source.
+   The HTML validation tool requires Java 17 or newer. CI installs and selects Java 17 before running the checks.
 3. Run `npm run test` (or a specific NPM script) to rebuild distributed CSS and JavaScript files, as well as our docs assets.
 4. From the root `/bootstrap` directory, run `npm run docs-serve` in the command line.
 5. Open `http://localhost:9001` in your browser, and voilà.
+
+The SCSS lint configuration keeps the existing Bootstrap 4 rules in `build/stylelint-legacy.config.json` while using the patched PostCSS build tools. The private adapters under `vendor/bootstrap-braces-safe` and `vendor/bootstrap-argparse-compat` retain the build APIs while enforcing bounded brace nesting and preserving the legacy YAML CLI version output. Run `npm run test-build-compat` to check these contracts and the GitHub/Sauce transport controls.
 
 Learn more about using Jekyll by reading its [documentation](https://jekyllrb.com/docs/home/).
 

@@ -26,7 +26,7 @@ $(function () {
 
   QUnit.test('should throw explicit error on undefined method', function (assert) {
     assert.expect(1)
-    var $el = $('<div/>')
+    var $el = $('<div></div>')
     $el.bootstrapDropdown()
     try {
       $el.bootstrapDropdown('noMethod')
@@ -37,7 +37,7 @@ $(function () {
 
   QUnit.test('should return jquery collection containing the element', function (assert) {
     assert.expect(2)
-    var $el = $('<div/>')
+    var $el = $('<div></div>')
     var $dropdown = $el.bootstrapDropdown()
     assert.ok($dropdown instanceof $, 'returns jquery collection')
     assert.strictEqual($dropdown[0], $el[0], 'collection contains element')
@@ -52,7 +52,7 @@ $(function () {
         '<div class="dropdown-menu">' +
         '<a class="dropdown-item" href="#">Secondary link</a>' +
         '<a class="dropdown-item" href="#">Something else here</a>' +
-        '<div class="divider"/>' +
+        '<div class="divider"></div>' +
         '<a class="dropdown-item" href="#">Another link</a>' +
         '</div>' +
         '</div>' +
@@ -119,7 +119,7 @@ $(function () {
         '<div class="dropdown-menu">' +
         '<a class="dropdown-item" href="#">Secondary link</a>' +
         '<a class="dropdown-item" href="#">Something else here</a>' +
-        '<div class="divider"/>' +
+        '<div class="divider"></div>' +
         '<a class="dropdown-item" href="#">Another link</a>' +
         '</div>' +
         '</div>' +
@@ -146,7 +146,7 @@ $(function () {
         '<div class="dropdown-menu">' +
         '<a class="dropdown-item" href="#">Secondary link</a>' +
         '<a class="dropdown-item" href="#">Something else here</a>' +
-        '<div class="divider"/>' +
+        '<div class="divider"></div>' +
         '<a class="dropdown-item" href="#">Another link</a>' +
         '</div>' +
         '</div>' +
@@ -176,7 +176,7 @@ $(function () {
         '<div class="dropdown-menu">' +
         '<a class="dropdown-item" href="#">Secondary link</a>' +
         '<a class="dropdown-item" href="#">Something else here</a>' +
-        '<div class="divider"/>' +
+        '<div class="divider"></div>' +
         '<a class="dropdown-item" href="#">Another link</a>' +
         '</div>' +
         '</div>' +
@@ -200,7 +200,7 @@ $(function () {
         '<div class="dropdown-menu">' +
         '<a class="dropdown-item" href="#">Secondary link</a>' +
         '<a class="dropdown-item" href="#">Something else here</a>' +
-        '<div class="divider"/>' +
+        '<div class="divider"></div>' +
         '<a class="dropdown-item" href="#">Another link</a>' +
         '</div>' +
         '</div>' +
@@ -224,7 +224,7 @@ $(function () {
         '<div class="dropdown-menu">' +
         '<a class="dropdown-item" href="#">Secondary link</a>' +
         '<a class="dropdown-item" href="#">Something else here</a>' +
-        '<div class="divider"/>' +
+        '<div class="divider"></div>' +
         '<a class="dropdown-item" href="#">Another link</a>' +
         '</div>' +
         '</div>' +
@@ -248,7 +248,7 @@ $(function () {
         '<div class="dropdown-menu">' +
         '<a class="dropdown-item" href="#">Secondary link</a>' +
         '<a class="dropdown-item" href="#">Something else here</a>' +
-        '<div class="divider"/>' +
+        '<div class="divider"></div>' +
         '<a class="dropdown-item" href="#">Another link</a>' +
         '</div>' +
         '</div>' +
@@ -279,7 +279,7 @@ $(function () {
         '<div class="dropdown-menu">' +
         '<a class="dropdown-item" href="#">Secondary link</a>' +
         '<a class="dropdown-item" href="#">Something else here</a>' +
-        '<div class="dropdown-divider"/>' +
+        '<div class="dropdown-divider"></div>' +
         '<a class="dropdown-item" href="#">Another link</a>' +
         '</div>' +
         '</div>' +
@@ -307,7 +307,7 @@ $(function () {
     var done = assert.async()
     var dropdownHTML = '<div class="nav">' +
         '<div class="dropdown" id="testmenu">' +
-        '<a class="dropdown-toggle" data-toggle="dropdown" href="#testmenu">Test menu <span class="caret"/></a>' +
+        '<a class="dropdown-toggle" data-toggle="dropdown" href="#testmenu">Test menu <span class="caret"></span></a>' +
         '<div class="dropdown-menu">' +
         '<a class="dropdown-item" href="#sub1">Submenu 1</a>' +
         '</div>' +
@@ -353,7 +353,7 @@ $(function () {
     var done = assert.async()
     var dropdownHTML = '<div class="nav">' +
         '<div class="dropdown" id="testmenu">' +
-        '<a class="dropdown-toggle" data-toggle="dropdown" href="#testmenu">Test menu <span class="caret"/></a>' +
+        '<a class="dropdown-toggle" data-toggle="dropdown" href="#testmenu">Test menu <span class="caret"></span></a>' +
         '<div class="dropdown-menu">' +
         '<a class="dropdown-item" href="#sub1">Submenu 1</a>' +
         '</div>' +
@@ -361,7 +361,7 @@ $(function () {
         '</div>' +
         '<div class="btn-group">' +
         '<button class="btn">Actions</button>' +
-        '<button class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"/></button>' +
+        '<button class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>' +
         '<div class="dropdown-menu">' +
         '<a class="dropdown-item" href="#">Action 1</a>' +
         '</div>' +
@@ -406,7 +406,7 @@ $(function () {
         '<div class="dropdown-menu">' +
         '<a class="dropdown-item" href="#">Secondary link</a>' +
         '<a class="dropdown-item" href="#">Something else here</a>' +
-        '<div class="divider"/>' +
+        '<div class="divider"></div>' +
         '<a class="dropdown-item" href="#">Another link</a>' +
         '</div>' +
         '</div>' +
@@ -440,7 +440,7 @@ $(function () {
         '<div class="dropdown-menu">' +
         '<a class="dropdown-item" href="#">Secondary link</a>' +
         '<a class="dropdown-item" href="#">Something else here</a>' +
-        '<div class="divider"/>' +
+        '<div class="divider"></div>' +
         '<a class="dropdown-item" href="#">Another link</a>' +
         '</div>' +
         '</div>' +
@@ -474,7 +474,7 @@ $(function () {
         '<div class="dropdown-menu">' +
         '<a class="dropdown-item" href="#">Secondary link</a>' +
         '<a class="dropdown-item" href="#">Something else here</a>' +
-        '<div class="divider"/>' +
+        '<div class="divider"></div>' +
         '<a class="dropdown-item" href="#">Another link</a>' +
         '</div>' +
         '</div>' +
@@ -508,7 +508,7 @@ $(function () {
         '<div class="dropdown-menu">' +
         '<a class="dropdown-item" href="#">Secondary link</a>' +
         '<a class="dropdown-item" href="#">Something else here</a>' +
-        '<div class="divider"/>' +
+        '<div class="divider"></div>' +
         '<a class="dropdown-item" href="#">Another link</a>' +
         '<input type="text" id="input">' +
         '<textarea id="textarea"/>' +
@@ -716,7 +716,7 @@ $(function () {
         '<div class="dropdown-menu">' +
         '<a class="dropdown-item" href="#">Secondary link</a>' +
         '<a class="dropdown-item" href="#">Something else here</a>' +
-        '<div class="divider"/>' +
+        '<div class="divider"></div>' +
         '<a class="dropdown-item" href="#">Another link</a>' +
         '<input type="text" id="input">' +
         '<textarea id="textarea"/>' +
@@ -919,7 +919,7 @@ $(function () {
         '<div class="dropdown-menu">' +
         '<a class="dropdown-item" href="#">Secondary link</a>' +
         '<a class="dropdown-item" href="#">Something else here</a>' +
-        '<div class="divider"/>' +
+        '<div class="divider"></div>' +
         '<a class="dropdown-item" href="#">Another link</a>' +
         '</div>' +
         '</div>'

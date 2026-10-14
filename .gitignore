@@ -3,7 +3,6 @@ _gh_pages
 _site
 
 # Ignore ruby files
-.ruby-version
 .bundle
 vendor/cache
 vendor/bundle
