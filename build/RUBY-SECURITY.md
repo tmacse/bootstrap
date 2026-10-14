@@ -19,11 +19,11 @@ bundle exec ruby build/test-ruby-docs.rb --site /absolute/path/to/temporary/site
 The check runs ordinary Markdown, GFM table and task-list, Jekyll include and
 heading, CSS selector, and URI template controls through the installed libraries.
 It checks the generated page URLs, redirects and sitemap, and reports missing
-TOC anchors. The legacy TOC includes example headings that have no IDs. Pass
-`--baseline /absolute/path/to/reference/site` to compare page URLs, heading IDs,
-navigation, redirects, sitemap URLs and CSS bytes with a reference build, and
-reject newly missing TOC anchors. Without a baseline, no TOC regression
-comparison is claimed.
+TOC anchors, failing if any target is absent. The TOC preserves the examples'
+original visual heading depth and links to real heading IDs. Pass
+`--baseline /absolute/path/to/reference/site` when an exact reference comparison
+of page URLs, heading IDs, navigation, redirects, sitemap and CSS is appropriate.
+The intentional heading and TOC corrections in this change are verified separately.
 
 The original vulnerable lockfile cannot safely represent a current dependency
 installation. A reference build that substitutes native dependencies or old Ruby

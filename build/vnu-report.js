@@ -3,7 +3,6 @@
 // This diagnostic adapter runs only in the supported Node.js build environment.
 /* eslint compat/compat: off */
 
-const crypto = require('crypto')
 const path = require('path')
 const url = require('url')
 
@@ -27,37 +26,14 @@ function diagnosticPath(message, roots) {
   throw new Error('VNU diagnostic is outside the checked input directories')
 }
 
-function signature(entry) {
-  return JSON.stringify([entry.path, entry.type, entry.subType || null, entry.message, entry.highlightHTML])
-}
-
-function evaluate(output, exitCode, baseline, roots) {
+function evaluate(output, exitCode, roots) {
   if (exitCode !== 0 && exitCode !== 1) {
     throw new Error(`Unexpected VNU exit code: ${exitCode}`)
-  }
-  if (baseline.schemaVersion !== 1 || !Array.isArray(baseline.entries)) {
-    throw new Error('Invalid VNU legacy baseline')
   }
   const report = JSON.parse(output)
   if (!report || !Array.isArray(report.messages)) {
     throw new Error('Invalid VNU JSON report')
   }
-  const remaining = new Map()
-  baseline.entries.forEach((entry) => {
-    const digest = crypto.createHash('sha256').update(entry.highlightHTML).digest('hex')
-    if (!Number.isInteger(entry.count) || entry.count < 1 || digest !== entry.extractHash ||
-        typeof entry.path !== 'string' || !entry.path || entry.path.indexOf('..') !== -1 ||
-        path.isAbsolute(entry.path) || typeof entry.message !== 'string') {
-      throw new Error('Invalid VNU legacy diagnostic entry')
-    }
-    const key = signature(entry)
-    if (remaining.has(key)) {
-      throw new Error('Duplicate VNU legacy diagnostic entry')
-    }
-    remaining.set(key, entry.count)
-  })
-
-  let known = 0
   let blocking = 0
   const unexpected = []
   report.messages.forEach((message) => {
@@ -81,20 +57,12 @@ function evaluate(output, exitCode, baseline, roots) {
       message: message.message,
       highlightHTML: highlightedHTML(message)
     }
-    const key = signature(entry)
-    const count = remaining.get(key) || 0
-    if (count > 0) {
-      remaining.set(key, count - 1)
-      known++
-    } else {
-      unexpected.push(entry)
-    }
+    unexpected.push(entry)
   })
   if (exitCode === 0 && blocking > 0 || exitCode === 1 && blocking === 0) {
     throw new Error('VNU exit code does not match the --Werror diagnostics')
   }
   return {
-    known,
     unexpected,
     passed: unexpected.length === 0
   }

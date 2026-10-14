@@ -12,7 +12,8 @@ We've designed and developed Bootstrap to work in a number of environments. Here
 {% endcapture %}
 {% include callout.html content=callout type="info" %}
 
-### General outline
+## General outline
+{: .h3}
 
 - Working with CSS
 - Working with Sass files
